@@ -14,7 +14,7 @@ public class Md03 {
         for (int []  w  :  a) { //nested loop kullandik. bu kisim ic arrayleri aliyor, tek tek asagidaki loop a gonederiyor
 
                            // [2 ,62,82]
-            for (int k :         w ){ // burada da ic array lerdeki elemanlar tek tek k ya gidiyor isleme girip toplaniyor sayi degeri ile
+            for (int k :        w ){ // burada da ic array lerdeki elemanlar tek tek k ya gidiyor isleme girip toplaniyor sayi degeri ile
 
                 sum = sum + k;  //burada sirasiyla ic array in elemanlari toplaniyor
 

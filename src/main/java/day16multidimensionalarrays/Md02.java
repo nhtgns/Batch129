@@ -7,8 +7,8 @@ public class Md02 {
 
         // Ex 1: Bir integer multidimensional array olusturunuz , toplam eleman sayisini konsola yazdirin
 
-        int a [][]  = { {13, 213, 4}, {12,87}, {4,7,1,9}, {99}  }; //burada icerdeki array lerin eleman sayilari farkli olabilir
-        System.out.println(Arrays.deepToString(a));  //[[13, 213, 4], [12, 87], [4, 7, 1, 9], [99]] toplam 10 eleman var
+        int a [][]  = { {13, 213, 4}, {12,87}, {4,7,1,9}, {99,78}  }; //burada icerdeki array lerin eleman sayilari farkli olabilir
+        System.out.println(Arrays.deepToString(a));  //[[13, 213, 4], [12, 87], [4, 7, 1, 9], [99, 78]]toplam 10 eleman var
 
 
         int sum = 0;
@@ -18,6 +18,6 @@ public class Md02 {
 
              sum = sum  +w.length; // burada her ic array in eleman sayisi alinip ekleniyor
         }
-        System.out.println(sum); //10
+        System.out.println(sum); //11
     }
 }

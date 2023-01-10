@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Md01 {
     public static void main(String[] args) {
 
-        // multidimensional Array nasil olusturul
+        // multidimensional Array nasil olusturulur
         int a [] [] = new  int[3][2]; //burada Inner arrayler(icteki array ler) 2 ser elemana sahip
 
         // md nasil yazdirilir?
