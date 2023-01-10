@@ -3,11 +3,11 @@ package day15arrays;
 public class Arrays04 {
     public static void main(String[] args) {
 
-        // e  Bir array in icinde herhangi bir elemanin olup olmadigini kontrol eden ve kac kere tekrarlandigini gos kod yaz
+        //EX 1:  Bir array in icinde herhangi bir elemanin olup olmadigini kontrol eden ve kac kere tekrarlandigini gos kod yaz
 
         int a[]  = {0,2,3,0,12,0}; // loop kullanilmali
 
-        int num = 0; //bu sayi kontrol edilecek
+        int num = 2; //bu sayi kontrol edilecek
 
         int  counter = 0; //kac kez
 

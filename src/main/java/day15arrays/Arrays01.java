@@ -28,7 +28,7 @@ public class Arrays01 {
                 break;
             }
 
-            stdNamesArray[i-1] = stdName;
+            stdNamesArray[i-1] = stdName;//sifirinci index e atadi
 
         }
         System.out.println(Arrays.toString(stdNamesArray));

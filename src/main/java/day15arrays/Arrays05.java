@@ -12,7 +12,7 @@ public class Arrays05 {
         String arr  []  = {"Michael",  "Ajda",  "Thomas",  "Tom",};
         System.out.println(Arrays.toString(arr)); //[Michael, Ajda, Thomas, Tom]
 
-        Arrays.sort(arr, Comparator.comparingInt(String::length));// string metoduna git uzunluga siralamy yap
+        Arrays.sort(arr,Comparator.comparingInt(String::length));// string metoduna git uzunluga siralamy yap
         System.out.println(Arrays.toString(arr));//[Tom, Ajda, Thomas, Michael]
 
         //burada karşılaştırmayı kendi isteğimize göre yaptık.
@@ -26,7 +26,7 @@ public class Arrays05 {
         String brr  []  = {"Michael",  "Ajda",  "Thomas",  "Tom", "Cuneyt"};
         System.out.println("Normal : " + Arrays.toString(brr)); //[Michael, Ajda, Thomas, Tom, Cuneyt]
 
-        Arrays.sort(brr, Comparator.comparingInt(String::length).reversed()); // reversed , buyukten kucuge siralar
+        Arrays.sort(brr, Comparator.comparingInt(String::length).reversed()); // reversed , ters cevirir
         System.out.println("buyukten kucuge sirali :" + Arrays.toString(brr)); //[Michael, Thomas, Cuneyt, Ajda, Tom]
 
         //Ex 3:  string array elemanlarini uzunluklarina gore  buyukten kucuge siralayiniz

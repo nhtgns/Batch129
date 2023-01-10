@@ -13,9 +13,9 @@ public class Arrays03 {
 
         int idx = 0;
 
-        for (int w: a){
+        for (int w:   a){
 
-            if (w != 0){
+            if (w !=  0) {
 
                 b[idx] = w; // java , b ye git 0,1,.. index i
 
