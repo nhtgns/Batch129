@@ -16,7 +16,7 @@ public class StringBuilder01 {
         String t=  s + "!";
         String w=  t + "?";
 
-        //String'i degistirdikten sonra ayni String assign ederseniz, Java yine yeni bir container olusturur,
+        //String'i degistirdikten sonra ayni String assein (atarsaniz) ederseniz, Java yine yeni bir container olusturur,
         //degismis degeri bu yeni container'in icine koyar ve eski container'i gosteren oku yeni container'a yonlendirir.
         //Dolayisiyla eski container adressiz kalir, ve "Garbage Collector" adressiz olan container'lari siler.
         String a = "Money"; // update ten sonra ayni degere atama
@@ -25,22 +25,21 @@ public class StringBuilder01 {
 
         // Mutable
         //StringBUilder kullanarak String uretmenin 1.yolu
-        StringBuilder sb1 = new StringBuilder("Python"); //appent birlestirme yapar
+        StringBuilder sb1 = new StringBuilder("Python");
         System.out.println(sb1); //Python
 
-        sb1.append("!").append("?").append(":");
-        System.out.println(sb1);
+        sb1.append("!").append("?").append(":");//appent birlestirme yapar
+        System.out.println(sb1);//Python!?:
 
-        //Stringbuilder kul string uter 2. yolu
-        StringBuilder sb2 = new StringBuilder();
+        //Stringbuilder kullanarak string uretmenin 2. yolu
+        StringBuilder sb2 = new StringBuilder(); // bu bos bir constructor, degeri asagida "Java"
         System.out.println(sb2.length());//0 lengt kutulaarin icindeki degeri verir
 
         //StringBuilder kullandiginizda baslangic kapa 16 dir
         //Capacity asimlarinda capacity var olanin iki katinin iki fazlasina cikar
         System.out.println(sb2.capacity());// 16  bos kutu verir baslangicta
 
-
-        sb2.append("Java");
+        sb2.append("Java");// constructor un ici bu
         System.out.println(sb2.length());//4
         System.out.println(sb2.capacity()); //16
 
@@ -73,21 +72,21 @@ public class StringBuilder01 {
         System.out.println(sb3.length());//3
         System.out.println(sb3.capacity());//6
 
-        sb3.insert(2, "xxxx"); //Flxxxxo ilk 2 karakteri es gectik sonrasina x ler koyduk
+        sb3.insert(2, "xxxx"); //Flxxxxo ilk 2 karakteri es gectik sonrasina x ler koyduk, indexi dikkate  almadi
         System.out.println(sb3.length());//7
         System.out.println(sb3);//Flxxxxo
 
         // toString methodu "StringBuilder" i "String" e cevirir.
         //String class da var olan ama stringBuilder class ta var olmayan split method gibi
         // methodlara ihtiyac duydugumuzda toString mrthodunu kullanarak String Class a gecer ve o methodlari kullanir
-        sb3.toString().split("l");
+        sb3.toString().split("l"); // burada sb3 ,tostring met ile stringe donustu
 
         //string i tekrar StringBuilder a cevir
         StringBuilder sb4 = new StringBuilder(sb3);
 
 
         //reverse methodu String leri ters cevirir
-        sb3.reverse(); //tersten yazdirir stringi
+        sb3.reverse();           //tersten yazdirir stringi
         System.out.println(sb3); //oxxxxlF
 
         //index 1 deki karakteri sil demek

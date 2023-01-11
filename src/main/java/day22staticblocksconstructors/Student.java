@@ -2,12 +2,13 @@ package day22staticblocksconstructors;
 
 public class Student {
 
-    String name;
+    String name; //ades atamsi yapmiyorum ,initialize yapmiyorum
     int age;
     int grade;
     String stdId;
     String address;
 
+    //intelije e otmatik constructor yaptiriyouz, sag tikla generate ve constroctor
     public Student(String name, int age, int grade, String stdId, String address) {
         this.name = name;
         this.age = age;
@@ -16,7 +17,8 @@ public class Student {
         this.address = address;
     }
 
-    public Student(String name, int age, String stdId) {
+    public Student(String name, int age, String stdId) { //daha az ozellik iceren constroctor
+                                                            // yine otom
         this.name = name;
         this.age = age;
         this.stdId = stdId;
@@ -24,7 +26,8 @@ public class Student {
 
 
     @Override
-    public String toString() {
+    public String toString() { //yaptiklarimizi yazdirmak icin de otomatik sout olusturulur
+                            //sag tikla generate ve istenilenleri sec ve sout olustu
         return "Student{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
@@ -32,5 +35,5 @@ public class Student {
                 ", stdId='" + stdId + '\'' +
                 ", address='" + address + '\'' +
                 '}';
-    }
+    } // class olustu, simdi runner
 }
