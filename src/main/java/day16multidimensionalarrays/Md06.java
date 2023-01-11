@@ -7,10 +7,10 @@ public class Md06 {
 
         //Ex 1: bir dm deki en buyuk ve en kucuk sayinin toplamini ekrana yazdirin
 
-        int a [][] = { {21,5} ,{14,70,11} };
+        int a [][] = { {21,5},{14,70,11} };
 
-        int small = a[0][0];
-        int big = a [1][1];
+        int small = a [0][0];
+        int big   = a [1][1];
 
         for (int[]  w : a){
 

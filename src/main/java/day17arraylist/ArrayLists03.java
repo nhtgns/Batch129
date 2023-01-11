@@ -16,7 +16,7 @@ public class ArrayLists03 {
         // remove() index ile kullanilirsa o index teki elemani siler. ve sildigini verir
         // remove () mth index ile kullanilirsa size sildigi elemani verir
 
-        String n = cities.remove(2); //sildigi elemani yaziyor, bu sekilde n yi yazdirirsam, ama cities i yazdirsam istanbul silinir sadece
+        String n = cities.remove(1); //sildigi elemani yaziyor, bu sekilde n yi yazdirirsam, ama cities i yazdirsam istanbul silinir sadece
         System.out.println(n);
 
 

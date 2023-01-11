@@ -6,7 +6,7 @@ import java.util.List;
 public class ArrayLists02 {
     public static void main(String[] args) {
 
-        // arraylist olustururken sag tarafa "Arraylist" yazmak zorundasiniz
+        // Arraylist olustururken sag tarafa "Arraylist" yazmak zorundasiniz
         //Ama sol tarafa ister "Arraylist" yazin isterseniz de "List "yazin ,ikisi de olur. List daha genel bir anlam icerir
         List< Character> initials = new ArrayList<>(); // initials , isimlerin ilk harflerini alma
         initials.add('A');
@@ -14,16 +14,17 @@ public class ArrayLists02 {
         initials.add('M');
         initials.add('B');
         initials.add('C');
+        initials.add('S');
 
         // bir List te kac eleman oldugunu nasil anlariz?
         int numOfElement = initials.size(); //size , eleman sayisi
-        System.out.println(numOfElement); // 5,
+        System.out.println(numOfElement); // 6
 
         //Note: Array lerden bahsederken "length" kullanin , List lerden bahsederken "size" kullanin.
 
         //Bir List ten istenen bir eleman nasil alinir?
-        char u = initials.get(2);
-        System.out.println(u); // M  // Character olarak kaydettik ama char olarak dönüş yaptı. burada autoboxing
+        char u = initials.get(0); // index egore calisiyor
+        System.out.println(u); // A  // Character olarak kaydettik ama char olarak dönüş yaptı. burada autoboxing
 
         //Ex 1: verilen bir string list teki tum elemanlarin toplam karakter sayisini bulan kodu yaziniz
 
@@ -74,8 +75,7 @@ public class ArrayLists02 {
 
        for (int i = 0; i < salary.size() ; i++) {
             salary.set(i, salary.get(i)*1.20);
-
-        }
+       }
         System.out.println(salary);
 
     }

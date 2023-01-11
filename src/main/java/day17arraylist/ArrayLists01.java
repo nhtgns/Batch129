@@ -36,6 +36,7 @@ public class ArrayLists01 {
         ages.add(10);
         ages.add(11);
         ages.add(12);
+        ages.add(34);
         System.out.println(ages); //[9, 10, 11, 12]
 
         ages.add(1, 656);//araya bir yere  eleman koymak istersen koymak istedigin yerin indexini once,  sayiyi sonra yaz add() ile
@@ -53,20 +54,22 @@ public class ArrayLists01 {
 
         //burada newAges teki tum elemanlari ages e ekle demek
         ages.addAll(newAges);//addAll()hepsini ekle demek,index belirtmezseniz siranin ensonuna atar eklediklerini,index belirtilirse o indexe
+        System.out.println(ages);
         ages.addAll(2, newAges); //index 2 'ye newAges i koy demek
         System.out.println(ages); //[9, 656, 8, 9, 10, 12, 777, 10, 888, 8, 9, 10]
 
-        //toArray() metodu: eleman sayisini verir
-      // degistirmeyecegimizden eminsek array'e cevirip memory kullanimini azaltabiliriz
+        //ages.toArray() metodu: List i Array e donusturur
+       // degistirmeyecegimizden eminsek array'e cevirip memory kullanimini azaltabiliriz
 
         //clear() medodu: Bir List'teki tum elemanlari siler.
 
-       ages.clear(); // bir listteki tum elemanlari siler. simdi yukaridakilerin hepsini silesimdi
-        System.out.println(ages); //[] bos kutu olur
+        //ages.clear(); // bir listteki tum elemanlari siler. simdi yukaridakilerin hepsini silesimdi
+       // System.out.println(ages); //[] bos kutu olur
 
 
         //contains methodu List te bir elemanin var olup olmadigini nasil konrol ederiz?
-        boolean r = ages.contains(656);
+       // boolean r = ages.contains(656);
+        boolean r = ages.contains(10);
         System.out.println(r); //false, yukarida clear i pasif yapsam true olurdu cunku 656 yukarida var
 
 
@@ -105,11 +108,11 @@ public class ArrayLists01 {
         nums2.add(8);
 
 
-        Collections.sort(nums1);
+        Collections.sort(nums1); // sort met Collections ile cagrilir
         Collections.sort(nums2);
 
         boolean t = nums1.equals(nums2);
-        System.out.println(t);
+        System.out.println(t); // true
 
 
 
