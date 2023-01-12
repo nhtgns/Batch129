@@ -17,7 +17,7 @@ public class Arrays01 {
         arr[4] = "Art";
 
         System.out.println(Arrays.toString(arr)); //[Math, Science, Music, English, Art]
-        //[0].length ilk arrayin elaninin karakter sayisi icin  , // [arr.length-1] ise arr aray inin son elemaninin karakter sayisi icin
+        //[0].length  arrayin ilk elaninin karakter sayisi icin  , // [arr.length-1] ise array in son elemaninin karakter sayisi icin
         System.out.println  (arr[0].length() + arr[arr.length-1].length()); // 7  ,ilk ve son array in karakter sayisi
 
         //arr[arr.length= arr nin eleman sayisi demek. ama biz index kullandigimiz icin -1 eklemeliyiz. index edogru ulasalim diye
