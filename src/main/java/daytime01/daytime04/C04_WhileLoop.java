@@ -1,4 +1,4 @@
-package practice.variablesdaytime01.daytime04;
+package daytime01.daytime04;
 
 import java.util.Scanner;
 

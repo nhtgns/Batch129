@@ -1,6 +1,4 @@
-package datatypesscannerdaytime02;
-
-import java.util.Scanner;
+package daytime02;
 
 public class C02_MethodCreation {
 

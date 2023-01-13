@@ -1,4 +1,4 @@
-package datatypesscannerdaytime02;
+package daytime02;
 
 public class C01_Sout {
 

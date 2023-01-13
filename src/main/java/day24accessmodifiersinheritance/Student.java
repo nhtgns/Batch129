@@ -1,12 +1,12 @@
 package day24accessmodifiersinheritance;
 
 public class Student {
+    //asgidakiler variable dir
 
     public String name = "Tom Hanks"; // name herkes tarafindan bilinebilir, o yuzden public yaptim
-
     String stdId = "TH2023HU12001"; // student Id okul yonetimindeki insanlar tarafindan bilinebilir, o yuzden default yaptik
 
-    protected int accountNUM = 76512345;//accountNum be, esim ve cocuklarim tarafindan bilinebilir
+    protected int accountNUM = 76512345;//accountNum ben, esim ve cocuklarim tarafindan bilinebilir.
 
     private int balance = 123000;// sadece benim oldu
 
