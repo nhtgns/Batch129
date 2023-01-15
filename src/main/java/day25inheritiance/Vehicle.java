@@ -13,7 +13,10 @@ public class Vehicle {
          5)"super()" ifadesini yazmak istege baglidir, yazmasaniz da Java sanki "super()" varmis gibi davranir.
        Ama kodunuzu daha okunur kilmak icin yazmaniz tavsiye edilir.
     6)"super()" ve "this()" ifadeleri constructor icinde her zaman ilk satirda olmalidir.
-      7)Bir constructor'in icinde "super()" ve "this()" ifadeleri sadece bir kere kullanilabilir. Bakiniz 6.kural..
+      7)Bir constructor'in icinde "super()" ve "this()" ifadeleri ayni anda kullanilamaz. Bakiniz 6.kural..
+      8) Inheritance 'da variable leri ve methodlari cagirmak icin (parantezsiz)"this" veya (parantezsiz"super" kullanilir
+      this ayni class icindeki variableleri ve mrthodlari cagirmak icin kullanilir
+      super parent class icindeki variableleri ve methodlari cagirmak icin kullanilir
       9) Inheritance'da Object kullanarak variable cagirirsanizi, Object'in data tipini temsil eden class'dan variable'i
       aramaya baslayiniz. O class da yoksa parent'lara bakiniz
      10) Inheritace'da Object kullanarak method cagirirsaniz Object'in constructor'ini temsil eden class'dan methodu aramaya baslayiniz
@@ -34,11 +37,11 @@ public class Vehicle {
 
 
      */
-    public  int price = 12000;
-    public  void engine (){
+    public int price = 12000;
+        public void engine(){ // bu bir method
+            System.out.println("Vehicle engine");
+        }
 
-        System.out.println("Vehicle engine");
-    }
     public Vehicle(){
         System.out.println("Vehicle 1");
     }

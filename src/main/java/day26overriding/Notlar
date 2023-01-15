@@ -1,0 +1,48 @@
+
+final kelimesi onemli bir kelimesidir.
+final variable ve methodlar vardir.
+final keywordu 3 yerde kullanilir.
+1) variable'larda
+2) method'larda
+3) Class'larda
+final variable :
+1- Bir variable "final" ise mutlaka deger atanmalidir.
+2- ilk atanan value degistirilemez.
+final method :
+1- Bir method "final" ise methodun body'si degistirilemez. Bu yuzden final methodlar override yapilamaz.
+final Class :
+1-
+/*
+*****sokrative notları*****
+1) Final kelimesini "Variable"larda kullanabilirsiniz.
+                    ->final variable ise
+                    i) mutlaka değer atanmalıdır
+                    ii) ilk atanan değer değiştirilemez
+
+ 2)Final kelimesini "Method" larda kullanabilirsiniz.
+                     ->method final ise;
+                      i)methodun body'si değiştirilemez
+                      ii)method body'si değiştirilemeyince override yapmak mümkün olmaz
+
+ 3)Final kelimesini "Class"larda kullanabilirsiniz.
+                     ->class final ise;
+                       i)o class'ın child'ı olamaz
+
+                       Static method'lar override yapilamazlar.
+ */
+ /*
+     Biz bazen bir Class'in icindeki datalari saklamak isteriz. Mesela ogrencinin Student id'yi herkes bilmemeli degil mi?
+ Arkadaslar kapsul seklinde ilaclar vardir. Bu kapsullere toz ilac koyarlar.
+ Napmis oluyorlar ilaci o kapsulun icinde saklamis oluyoruz. Bu kapsulu Class gibi dusunun,
+ icindeki toz ilaci da variable olarak dusunun. Ben bu sekilde bir ilac uretirsem ilaci kapsulun icinde saklamis olurum.
+ Bu ise kapsulleme ingilizce ENCAPSULATION denir. Benim ilk aldigim offerda aldigim soru buydu.
+ What is encapsulation could you please tell me? dedi. Ben de dedim ki "Data Hiding" dedim. Sorarlarsa boyle diyin
+ offer alirsiniz :)) dedi.
+     "private" access yaparak encapsulation yapmis oluruz. Ilanin disindayken ilaci goremeyiz. Kapsulun icinden goruruz.
+ Ayni mantikla Class'in icinde olursak "private" datayi goruruz. Ayni bu kapsulde oldugu gibi.
+ Simdi size dicekler ki encapsulation nedir. Data Hiding. Data nasil saklanir. Access Modifier private yapariz. diyeceksiniz, dedi.
+
+  Encapsulation faydası;
+ 1. guvenlık..saklamazsak dısardan etkıler data yı bozabılır.
+ 2. dıkkatı dagılır..odak dagınıklıgının onune gecer
+     */

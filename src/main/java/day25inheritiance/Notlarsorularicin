@@ -1,0 +1,6 @@
+
+
+1) variable ler cagrilirken olusturulan object in data type ine bakarsiniz. data type Dog, bu su demektir. bark, dog class indan secilecektir
+burada olusturulan object te veriable lara nasil olasilir onu ogrendik
+2)methodlari cagirmak icin constructor a bakilir
+3)Class larin icinde default constructor vardir
