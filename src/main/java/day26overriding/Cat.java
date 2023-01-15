@@ -14,7 +14,7 @@ public class Cat extends Mammal{
     }
 
     @Override  // Override Annotation: Override kurallarinin java tafindan kontrol edilmesini saglar
-    public void eat() {  //Child daki override
+    public void eat() {  //Child daki override edilmis eat() methoduna "Overriding method" denir
         System.out.println("Cats eat...");
     }
 
