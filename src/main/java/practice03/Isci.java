@@ -1,4 +1,4 @@
-package practice06;
+package practice03;
 
 public class Isci {
     protected void mesai (){

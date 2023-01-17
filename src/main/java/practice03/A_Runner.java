@@ -1,6 +1,6 @@
-package practice06;
+package practice03;
 
-public class A {
+public class A_Runner {
 
     public static void main(String[] args) {
         B b = new B();
@@ -19,5 +19,6 @@ public class A {
         System.out.println(child.x); //20
         System.out.println(child.sayi); //50
         child.m(); // bad
+
     }// main
 }

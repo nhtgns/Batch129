@@ -17,7 +17,7 @@ public class Animal {
 
   8)Method'un return type'i "primitive" ise, Overriding yaparken return type degistirilemez.
     primitive'ler arasinda parent-child iliskisi olmadigindan parent'dan secmek
-    mevzu olamaz. O zaman tek secenek aynisi olmalidir kalir.
+    mevzu olamaz. O zaman tek secenek aynisi olmalidir
   9)Method'un return type'i "Wrapper Class" ise, Overriding yaparken return type degistirilemez.
     Cunku; return type ya ayni olur veya parent'dan secilir,
     ama Java bir wrapper class'i digerinin parent'i yapmadigindan parent'dan secme ihtimali yoktur,

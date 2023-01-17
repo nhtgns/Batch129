@@ -1,4 +1,4 @@
-package practice04;
+package practice01;
 
 import java.util.Arrays;
 import java.util.Scanner;

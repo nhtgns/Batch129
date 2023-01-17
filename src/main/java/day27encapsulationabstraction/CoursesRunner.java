@@ -9,6 +9,9 @@ public class CoursesRunner {
         //Dolayisiyla; abstract class'lar eksigi olan kaliplar gibi dusunulebilir.
         //Java eksik kaliplarin object uretmesine musaade etmez.
         //Bu yuzden, abstract class'lardan object uretilemez.
+        //Abstract class larin consructor i vardir, ama bu constructor object uretemez haldedir, eli kolu bagli
         // Courses myCourse = new Courses();
+
+
     }
 }

@@ -1,4 +1,4 @@
-package practice04;
+package practice01;
 
 public class Hesapmakinesi {
     public void toplama (double... a) { // istediğimiz kadar sayıyı toplayabilmek için varargs kullandık.

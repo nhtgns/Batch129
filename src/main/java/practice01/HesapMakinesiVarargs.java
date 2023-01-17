@@ -1,4 +1,4 @@
-package practice04;
+package practice01;
 
 public class HesapMakinesiVarargs {
     public static <HesapMakinesi> void main(String[] args) {

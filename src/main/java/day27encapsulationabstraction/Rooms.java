@@ -7,4 +7,6 @@ public abstract class Rooms extends Courses{
     //Mesela; Rooms Class abstract class'dir, Rooms Class'i Courses abstract
     //class'inin child'i yaptigim  ve override yapmadigim halde kod sikayet
     //etmiyor.
+
+
 }

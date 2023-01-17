@@ -14,16 +14,16 @@ public class Student {
      non static variable lerin diger adi "Instance variable" veya "Object variable"  da denir
      */
 
-    public static String stdName = "Tom Hanks"; //static
+    public static String stdName = "Tom Hanks"; //static variable
+    //normal aplicatin larda bircok class olur ama hepsinin bagli oldugu bir tana Runner class olur, her class in icinde runner olmaz
 
-    public int age = 13;  //non static
+    public int age = 13;  //non static variable
 
 
     // ogrenci isminin ilk harflerini veren methodu olusturunuz
-    public static String getInitials(String name) {
+    public static String getInitials(String name) { //static method
 
         String first = name.substring(0, 1);
-
         String second = name.split(" ")[1].substring(0, 1);
 
         return first + second;
@@ -32,10 +32,9 @@ public class Student {
     }
 
     //Ogrenci ismindeki sesli harfleri(aeiou) sayan bir method olusturunuz
-    public int countVowels(String name) {
+    public int countVowels(String name) {  //non static method
 
         int counter = 0;
-
         for (int i = 0; i < name.length(); i++) {
             char ch = name.toLowerCase().charAt(i);
             switch (ch) {

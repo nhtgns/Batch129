@@ -39,27 +39,27 @@ public class MethodOverloading01 {
     }//main
 
 
-    private static void add(int a, int b){  //java hangisini kullanacagina nasil karar verir. unik olmak neydi
+    public static void add(int a, int b){  //java hangisini kullanacagina nasil karar verir. unik olmak neydi
         System.out.println(a+b);
 
     }    // public static int, int demek bir data donduruyorsunuz demek
          //private static int add(int a, int b){  //java hangisini kullanacagina nasil karar verir. unik olmak neydi
          //return a+b;
 
-    private static void add(double a, double b){
+    public static void add(double a, double b){
         System.out.println(a+b);
 
     }
-    private static void add(double a, int b){
+    public static void add(double a, int b){
         System.out.println(a+b);
 
     }
-    private static void add(int a, double b){
+    public static void add(int a, double b){
         System.out.println(a+b);
 
     }
-    private static void add(int a, int b, int c){
+   public static void add(int a, int b, int c){
         System.out.println(a+b);
 
     }
-}
+}//class

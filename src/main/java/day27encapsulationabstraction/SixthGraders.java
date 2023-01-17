@@ -6,4 +6,5 @@ public class SixthGraders extends Courses{
     public void math() {
         System.out.println("Sixth graders math...");
     }
+
 }

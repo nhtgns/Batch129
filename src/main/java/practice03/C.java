@@ -1,4 +1,4 @@
-package practice06;
+package practice03;
 
 public class C {  //dede
     public int x = 10;

@@ -10,6 +10,6 @@ public class SeventhGraders extends Courses {
 
     @Override
     public void art() {
-        System.out.println(" Art so");
+        System.out.println(" Art so  ");
     }
 }

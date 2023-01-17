@@ -5,6 +5,8 @@ public abstract class Courses {
     // metodu olmayan child class larin hepsi kullanmak zorundadir.
     // abstrak olunca o ders mecburi olur ve icini doldurursun 6.,7,8.. sinif mufredati ile
     // child lar abs methodu override ederek kullanir
+    // bos body i 6. siniflar icin 6. sinif mufredati seklinde doldurursam override yapmis olurum methodu,body degistigi icin
+    //method larda body yazmak kullanmak sart
     /*
     1) Bazen method body'sini yazmak gerekmez, bu durumlarda body'siz method olusturmak gerekir.
     Body'si olmayan method'lara "abstract method"lar denir.
@@ -24,6 +26,7 @@ public abstract class Courses {
 
      6)"concrete class" lar "abstract class" larin child'i olabilirler.
       "abstract method" larin override edilme zorunlulugu "concrete class" lar icindir.
+      //abstract methodlar Implement edilir, conceret methodlar override edilir
  */
     public abstract void math(); //zorunlu ders
     //Implement, uygulamak demek

@@ -1,4 +1,4 @@
-package practice06;
+package practice03;
 
 public class B  extends C { //baba
     public int x =  20;

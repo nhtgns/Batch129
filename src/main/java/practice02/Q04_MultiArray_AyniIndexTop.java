@@ -1,6 +1,4 @@
-package practice05;
-
-import java.util.Arrays;
+package practice02;
 
 public class Q04_MultiArray_AyniIndexTop {
 

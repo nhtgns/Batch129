@@ -1,4 +1,4 @@
-package practice06;
+package practice03;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;

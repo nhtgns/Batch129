@@ -1,4 +1,4 @@
-package practice06;
+package practice03;
 
 public class SurekliIsci extends Isci{
     public void mesai (){

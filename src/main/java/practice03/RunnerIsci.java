@@ -1,4 +1,4 @@
-package practice06;
+package practice03;
 
 public class RunnerIsci {
     public static void main(String[] args) {
