@@ -1,14 +1,14 @@
 package day22staticblocksconstructors;
    /*
     Constructor nedir?
-    Class tan object uretmemize yarayan code block laridir.
+    Class tan object uretmemize yarayan "code block" laridir.
 
     Class olusturdugumuzda java bize otomatik olarak bir "constructor" verir
     ama bu constructor gozle gorunmez
 
     Java tarafindan verilen constructor lara default "constructor" lar denir
 
-    "default constractor" lar "Car(){}" seklindedir.
+    "default constractor" lar "Car(){}" seklindedir. bu constructor object uretmeye yarar
     Siz kendi constructor olusturdugunuzda java default olani siler.
 
     - Bir class ta farkli parametreler kullanarak istediginiz kadar "constructor" olusturabilirsiniz
@@ -25,13 +25,16 @@ package day22staticblocksconstructors;
 
 public class Car {  //car class i  kalibi acayip esnek bir kalip, cunku ayni  anda honda , mercedes, bmw uretilebiliyor
 
-    String make = "Honda";
+    String make  = "Honda";
     String model = " Accord";
-    int year = 2023;
+    int year    = 2023;
     boolean hybrid = true;
 
-   public Car (String make,String model, int year, boolean hybrid){//constructor
-        this.make = make;
+    //kendi constructorumuzu olusturarak, biz burada java diyoruz ki; markaya, modele , fiyata... ben karar verecegim
+
+   public Car (String make,String model, int year, boolean hybrid){//bu, bizim olusturdugumuz constructor. icindekiler ise parametre
+
+        this.make = make; // "this.make" demek, bu class taki make i, demek . make ben karar verecegim demek
         this.model =model;
         this.year = year;
         this.hybrid = hybrid;
@@ -53,13 +56,15 @@ public class Car {  //car class i  kalibi acayip esnek bir kalip, cunku ayni  an
      }
 
      @Override
-    public String toString() { // otomatik geldi, obje leri ekrana yazdirmak icin bu gerekli ,zorunlu
+    public String toString() { //obje leri ekrana yazdirmak icin" toString" methodu olusturduk, bu gerekli ,zorunlu
         return "Car{" +
                 "make='" + make + '\'' +
                 ", model='" + model + '\'' +
                 ", year=" + year +
                 ", hybrid=" + hybrid +
                 '}';
+         //object lerin oldugu class ta ,object ozelliklerinden hemen sonra,class in icinde, sag tikla, generate tikla,to String var onu sec,
+         // ve orada ozellikler var ve sec
     }
 }
 

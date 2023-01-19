@@ -5,17 +5,17 @@ public class StaticBlocks01 {
     // Bir variable olusturdugunuzda deger atamazsaniz o variable yi "initialize"(baslatmak, deger atamasi yapmak) etmediniz demektir
     //static variableler static blocklar icinde initialize edilirse , o class in icinde hersey den once hazir hale getirilmis olur
     //bazen main method calistirilmadan once variablelerin hazir hale getirilmesi gerekir bu yuzden static block lar kullanilir
-    //main methoda koy her sey sttaic olmali
+    //main methoda koyulan her sey sttaic olmali
     //staticblocks : main motor çalıştırılmadan önce variable ları hazır hale getirir
     //static block larin onceligi var her zaman, siralama onemli degil
     //Note1: //Note 1; Static blocklar static variableleri initialize etmek için kullanılırlar.
              //Note 2: Static bloklar class içnide herşeyden önce calıştırılırlar.
 
-    static   double pi;
+    static   double pi; //pi ye deger vermedik, java buna default bir deger verir
     static  String shape ;
 
     static {
-        pi = 3.14;
+        pi = 3.14;//burada pi , initialize edildi, deger verildi, baslatirldi, main methoddan once, yemek yapmadan onceki hazirlik gibi
         System.out.println("Static block 1 " + pi);// Static block 1  , once
     }
     static {
@@ -25,6 +25,8 @@ public class StaticBlocks01 {
 
     public static void main(String[] args) { //en son
         System.out.println("main method");
+
+
 
     }//main
 }

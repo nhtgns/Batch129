@@ -13,7 +13,7 @@ public class Kumanda {
         this.genislik = genislik;
         this.yukseklik = yukseklik;
         this.ekranBuyuklugu = ekranBuyuklugu;
-    }//cons
+    }
 
     public String kanalDegistirme(String kanal){
         switch (kanal){

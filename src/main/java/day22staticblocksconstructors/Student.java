@@ -26,7 +26,7 @@ public class Student {
 
 
     @Override
-    public String toString() { //yaptiklarimizi yazdirmak icin de otomatik sout olusturulur
+    public String toString() { //yaptiklarimizi yazdirmak icin de otomatik tostring ile sout olusturulur
                             //sag tikla generate ve istenilenleri sec ve sout olustu
         return "Student{" +
                 "name='" + name + '\'' +

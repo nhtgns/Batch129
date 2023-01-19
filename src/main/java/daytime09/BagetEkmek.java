@@ -1,6 +1,6 @@
 package daytime09;
 
-public class BagetEkmek extends TSE{
+public  class BagetEkmek extends TSE{
     @Override
     void gramaj500() {
         System.out.println("Baget ekmek 250 gr olmalidir");

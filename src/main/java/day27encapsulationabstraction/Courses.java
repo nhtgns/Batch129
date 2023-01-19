@@ -25,22 +25,25 @@ public abstract class Courses {
      5)"abstract class" larda hem "abstract method" lar hem de "concrete method" lar kullanilabilir.
 
      6)"concrete class" lar "abstract class" larin child'i olabilirler.
-      "abstract method" larin override edilme zorunlulugu "concrete class" lar icindir.
-      //abstract methodlar Implement edilir, conceret methodlar override edilir
+       "abstract method" larin override edilme zorunlulugu "concrete class" lar icindir.
+       //abstract methodlar Implement edilir, conceret methodlar override edilir
  */
-    public abstract void math(); //zorunlu ders
+    public abstract void math(); //zorunlu ders abstrack olmayan cocuk classlar icin
     //Implement, uygulamak demek
+
 
     public void art(){
         System.out.println("Painting...");//secmeli ders oldu
     }
     //final method'lar "override" edilemezler, halbuki "abstract" method'lar override edilmek icin olusturulurlar.
     //Bu celiskidir bu yuzden Java abstract method'larin final olmasina musaade etmez.
+
     //public final abstract void science();
+
     // Concrete Class'lar final oldugunda Child Class'a sahip olamazlar
     // Ama "Abstract Class" lar icin Child Class olmalidir,cunku Child Class'lar abstract parent classs'daki abstract method'lari kullanirlar.
     // Bu yuzden Java "Abstract Class"larin "final " olmasina musaade etmez.
-    //"abstract method" lar "private" olamazlar cunku Child class'lar "abstract method"lari kullanirlar, private yapinca kullanima kapali olur.
+    //--"abstract method" lar "private" olamazlar cunku Child class'lar "abstract method"lari kullanirlar, private yapinca kullanima kapali olur.
     //Bu celiskidir bu yuzden Java "abstract method"larin "private" olmasina musaade etmez.
     //"abstract method" lar "static" olamazlar, cunku static method'lar override edilemez,
     // halbuki abstract method'lar override edilmek icin olusturulmustur.

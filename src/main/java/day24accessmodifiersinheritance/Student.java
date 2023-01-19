@@ -32,7 +32,7 @@ Access modifierlar genisten dara dogru;
 Class'lar protected ve private olamazlar. Sadece public ve default olabilirler.
 
 Access Modifier'lar ne ise yarar?
-    -Variablelara methodlara classlara ulasmayi duzenler.
+    -Variablelara, methodlara, classlara ulasmayi duzenler.
 Kac tane access modifier var ? 4. public > protected > default > private
 
 publicler icin hicbir sinirlama yoktur projenin her yerinden ulasilabilir
