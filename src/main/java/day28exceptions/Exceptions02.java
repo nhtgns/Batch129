@@ -8,18 +8,19 @@ public class Exceptions02 {
         String t = "1a2b";
         convertStringToInt(t);
 
+
     }
     //Icinde rakamlar disinda character olan bir String'i sayiya cevirmek isterseniz Java "NumberFormatException" atar.
     public static void convertStringToInt(String s){
         int intS = 0;
         try{
-            intS = Integer.valueOf(s);
+            intS = Integer.parseInt(s);
 
         }catch (NumberFormatException e){
             System.out.println("Bir String'in sayiya donusturulebilmesi icin rakam disi character icermemesi gerekir");
             System.out.println(e.getMessage());
         }
-        System.out.println(intS + 1);
+        System.out.println(intS + 1 );
     }
 
     }

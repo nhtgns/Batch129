@@ -4,7 +4,7 @@ public class Exceptions01 {
      /*
         1)Exception demek beklenmedik problem demektir. Seyahatte benzin'in bitmesi, arabanin bozulmasi gibi..
         2)Gercek hayatta karsilastigimiz beklenmedik problemler icin cozum yollarimiz vardir. Mesela benzin bitince Yol Yardim'i arariz.
-          Application'larda da beklenmedik problemler icin cozum yollari uretmeliyiz, bu isleme "Exception Handling" denir.
+          Application'larda da beklenmedik problemler icin cozum yollari uretmeliyiz, bu isleme "Exception Handling"(hatayla basetmek) denir.
         3)Exception'lar temel olarak ikiye ayrilirlar
                 i)Compile Time Exception: Siz code yazarken farkedilir ve yazdiginiz kodun alti kirmizi cizgi ile cizilir.
                 ii)Run Time Exception: Siz code yazarken farkedilmez ama, code'u calistirdiginizda console'da hata alirsiniz.
