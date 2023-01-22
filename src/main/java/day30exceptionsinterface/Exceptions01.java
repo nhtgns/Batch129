@@ -28,7 +28,7 @@ public class Exceptions01 {
         int b = 4;
         int c[] = {3, 6, 9, 12};
 
-        m(c, a, b);
+        m(c, a, b); //burada sayi yazmadik, cunku sayilari yukarida tanimladik
 
     }
 
@@ -42,7 +42,7 @@ public class Exceptions01 {
             System.out.println(e.getMessage());
         }catch(ArrayIndexOutOfBoundsException e){
             System.out.println(e.getMessage());
-        }finally {
+        }finally { //herhalukarda calismasi istenen kodlar finally icine yazilir
             System.out.println("Cut the connection with the DB");
         }
 
