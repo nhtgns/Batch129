@@ -9,5 +9,6 @@ public class HondaRunner {
 
         Accord myAccord = new Accord();
         myAccord.cool();
+        //Methodlar object ismi ile cagrilir
     }
 }

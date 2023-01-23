@@ -14,10 +14,10 @@ public interface Ac {
 
     //interface'lerdeki variabler otomatik olarak "public" dir, "static" dir, "final" dir.
 
-    void cool(); // interface lerin icine concret metod koyulmaz,
+    void cool(); // interface lerin icine concret metod koyulmaz.
 
 
-   // coklu isteklere java musaade etmez, ye, ic uyu gibi olmali
+   // coklu isteklere java musaade etmez, ye, ic uyu gibi olmali.
     void run();
 
 

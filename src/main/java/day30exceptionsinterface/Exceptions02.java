@@ -25,8 +25,8 @@ public class Exceptions02 {
 
                     1.2) CompileTimeExceptions (CheckedExceptions)
                         1.1.1) FileNotFoundException
-                        1.1.2) IOException
-        */
+                        1.1.2) IOException.
+           */
 
         int a = 12;
         int b = 3;

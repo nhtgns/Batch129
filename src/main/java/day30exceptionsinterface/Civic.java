@@ -13,12 +13,16 @@ package day30exceptionsinterface;
 public class Civic implements Ac, Engine,Security {
      @Override
      public void cool() {
-         System.out.println("Civic cools perfectly");
+         System.out.println("Civic cools perfectly.");
      }
 
      @Override
      public void run() {
          System.out.println();
+     }
 
+     @Override
+     public void guvenlik() {
+         System.out.println("guvenlik onceligimiz");
      }
  }

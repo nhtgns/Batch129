@@ -23,7 +23,7 @@ public class Cat extends Mammal{
         System.out.println("Cats drink...");
     }
 
-    // new Cat() ==> Cat olusturduk. Cat bir Animal oldugu icin olusturdugumuz Cat'i Animal,Mammal ve car data type'ina koyabiliriz.
+    // new Cat() ==> Cat olusturduk. Cat bir Animal oldugu icin olusturdugumuz Cat'i Animal,Mammal ve cat data type'ina koyabiliriz.
     @Override
     public Animal create() {
         return new  Cat();

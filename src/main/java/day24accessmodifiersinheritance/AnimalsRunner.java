@@ -5,7 +5,7 @@ import day23datetimestringbuilder.Snake;
 public class AnimalsRunner {
     public static void main(String[] args) {
 
-        Cat myCad = new Cat(); //cat object i olusturduk
+        Cat myCad = new Cat(); //myCat object i olusturduk, ayni zamanda Cat() constructor i olusturduk
         myCad.meow();   //       Cats meow...       bu cat class indan geldi
         myCad.drink();  //      Animals drink...    bu animals class tan geldi
         myCad.eat();    //      Animals eat...      bu animals class tan geldi
