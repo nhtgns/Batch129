@@ -58,7 +58,7 @@ public class Animal {
 
 
  */
-    //methodlar uzerindeki islemlerdir ovlod  ve overrid
+    //methodlar uzerindeki islemlerdir overloading  ve overrieding
 
     public  void  eat (){ // Parent teki override edilmis eat() methoduna "Overridden method" denir
         System.out.println("Animals eat..");

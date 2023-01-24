@@ -12,9 +12,9 @@ public class LinkedList01 {
      2) Abstract Class'larda object olusturulamaz consructor'lari vardir ama constructor object olusrturmadan kullanilamaz.
      3) interface'lerin consructor'lari olmadigindan collection olustururken interface isimleri "new" keyword'unden sonra kullanilmaz.
      4) class-->class==>extends
-        class-->interface==>implements
+        class-->interface==>implements (class i interface in cocugu yapmak)
         interface-->interface==> extends
-        interface -->class==> bu mumkun degildir
+        interface -->class==> bu mumkun degildir( interface i ,class in cocogu yapamazsiniz)
      5)ArrayList'ler eleman silme ve eleman eklemede basarisizdirlar. O yuzden eleman silme ve ekleme islemleri coklukla
        yapilacaksa ArrayList kullanmak tavsiye edilmez.
        //LINLEDLIST ==> Eleman silme-ekleme cok basarilidir. Index kullanmaz.
@@ -35,41 +35,47 @@ public class LinkedList01 {
         names.add("Raj");
         names.add("Megan");
         names.add("Brandon");
-        System.out.println(names);//[Steve, Carl, Raj, Megan, Brandon]
+        System.out.println(names);    //[Steve, Carl, Raj, Megan, Brandon]
 
         names.addFirst("Cuneyt");
-        System.out.println(names);
-        names.addLast("Ajda");//This method is equivalent to add.
-        System.out.println(names);
-        names.add(2, "Suleyman");//index yazsa da ,index kullanmaz,2. isimden sonra sulayman yazdirdi
-        System.out.println(names);//[Cuneyt, Steve, Suleyman, Carl, Raj, Megan, Brandon, Ajda]
+        System.out.println(names);   //[Cuneyt, Steve, Carl, Raj, Megan, Brandon]
+        names.addLast("Ajda");    //This method is equivalent to add.
+        System.out.println(names);  //[Cuneyt, Steve, Carl, Raj, Megan, Brandon, Ajda]
+        names.add(2, "Suleyman");  //LinkedList index yazsa da ,index kullanmaz,2. isimden sonra sulayman yazdirdi
+        System.out.println( names);              //[Cuneyt, Steve, Suleyman, Carl, Raj, Megan, Brandon, Ajda]
         names.add("Suleyman");
+        System.out.println(names); //[Cuneyt, Steve, Suleyman, Carl, Raj, Megan, Brandon, Suleyman]
 
-        names.remove("Ajda");// 2 tane ayni object varsa ilk siradakini siler
+        names.remove("Ajda");// 2 tane ayni object varsa ilk siradakini siler. remove methodu loop kullandi, sirayla bakti
         System.out.println(names);//[Cuneyt, Steve, Suleyman, Carl, Raj, Megan, Brandon]
 
-        String r1 = names.remove();   // Retrieves and removes the first element of this list. (Cut + Paste)
-        System.out.println(r1);// cuneyt
-        System.out.println(names);// [Steve, Suleyman, Carl, Raj, Megan, Brandon]
+        names.remove(4); // 4 ten sonraki node u siliyor
+        System.out.println(" Carl siz : " + names);
 
-        names.removeFirstOccurrence("Suleyman");
+        String r1 = names.remove();   // Retrieves and removes the first element of this list. (Cut + Paste)
+        System.out.println(r1);      // cuneyt, ilk ele mani siliyor
+        System.out.println(names);// [Steve, Suleyman, Carl, Raj, Megan, Brandon] ilk node u sildi, o da acuneyt
+
+        names.removeFirstOccurrence("Suleyman");// suleymanin ilk gorunumunu sil ,demek
         System.out.println(names);//[Steve, Carl, Raj, Megan, Brandon, Suleyman]  ilk suleyman gitti
 
-        names.removeLastOccurrence("Suleyman");
+        names.removeLastOccurrence("Suleyman"); // sonuncu suleyman i sil demek
         System.out.println(names);// [Steve, Raj, Brandon, Ajda, Suleyman]
 
         String r2 = names.peek();  //Retrieves, but does not remove, the head (first element) of this list. kopyalama yapiyor (kopy + Paste)
-                                   // Returns:the head of this list, or null if this list is empty.ilk elemani silmeden verir
+                                   // Returns:the head of this list, or null if this list is empty. Ilk elemani silmeden verir
         System.out.println(r2);    //Steve
-        System.out.println(names); //[Steve, Carl, Raj, Megan, Brandon]
+        System.out.println(names); //[Steve, Carl, Raj, Megan, Brandon] Steve silinmedi,zaten silmez
 
           //  Retrieves and removes the head (first element) of this list. (Cut + Paste)
           //      Returns:the head of this list, or null if this list is empty
           // remove methodu bos LinkedList te lullanilirsa "hata verir", poll() bos LinkedList te kullanilirsa "null" verir
-        names.poll(); //  silme yapar
+        names.poll(); //  ilk elemani silme yapar
 
         //Pop removes and returns the first element of this list.(Cut + Paste)
         //This method is equivalent to removeFirst().
         names.pop(); // removeFirst gibidir
+
+
     }
 }
