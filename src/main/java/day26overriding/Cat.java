@@ -25,7 +25,7 @@ public class Cat extends Mammal{
 
     // new Cat() ==> Cat olusturduk. Cat bir Animal oldugu icin olusturdugumuz Cat'i Animal,Mammal ve cat data type'ina koyabiliriz.
     @Override
-    public Animal create() {
+    public Cat create() {
         return new  Cat();
     }
 
