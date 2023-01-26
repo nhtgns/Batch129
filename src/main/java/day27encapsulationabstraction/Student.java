@@ -34,7 +34,7 @@ public class Student {  //Class lar ya public ya da default olur, class member l
     //set method'larin (setter) return type'i her zaman void olur.
     //set method'larin (setter) isimleri "set + variable name" seklinde olur.
     //set method'lar (setter) variable ile ayni data type' inde parametre kullanir.
-    // getter ve setter larin ikisine birden "Jaba Beans" denir.
+    // getter ve setter larin ikisine birden "Java Beans" denir.
 
 
     public void setGpa(double gpa) { //setGpa ne demek, degistir gpa yi, demek. poor u degistirebiliriz

@@ -1,12 +1,6 @@
 package day27encapsulationabstraction;
 
 public abstract class Courses {
-    //body , vucut demek, vucut gidince soyut kalir, yani body si olmayan method ortaya cikar.
-    // metodu olmayan child class larin hepsi kullanmak zorundadir.
-    // abstrak olunca o ders mecburi olur ve icini doldurursun 6.,7,8.. sinif mufredati ile
-    // child lar abs methodu override ederek kullanir
-    // bos body i 6. siniflar icin 6. sinif mufredati seklinde doldurursam override yapmis olurum methodu,body degistigi icin
-    //method larda body yazmak kullanmak sart
     /*
     1) Bazen method body'sini yazmak gerekmez, bu durumlarda body'siz method olusturmak gerekir.
     Body'si olmayan method'lara "abstract method"lar denir.
@@ -28,12 +22,12 @@ public abstract class Courses {
        "abstract method" larin override edilme zorunlulugu "concrete class" lar icindir.
        //abstract methodlar Implement edilir, conceret methodlar override edilir
  */
-    public abstract void math(); //zorunlu ders abstrack olmayan cocuk classlar icin
-    //Implement, uygulamak demek
+    public abstract void math();                //zorunlu ders abstrack olmayan cocuk classlar icin
+                                                //Implement, uygulamak demek
 
 
     public void art(){
-        System.out.println("Painting...");//secmeli ders oldu
+        System.out.println("Painting...");         //secmeli ders oldu cunku abstrak bir method degil
     }
     //final method'lar "override" edilemezler, halbuki "abstract" method'lar override edilmek icin olusturulurlar.
     //Bu celiskidir bu yuzden Java abstract method'larin final olmasina musaade etmez.
