@@ -1,0 +1,18 @@
+
+
+sozluk yapisi map'a benzer
+solda kelime, sagda aciklamasi vardir
+soldakiler tekrarli olamaz sagda tekrar olabilir
+map te boyledir soldakiler Unique (yunik) olacak sag taraf tekrarli olabilir de olmayapilir repeatedly (tekrarli) olabilir
+cat = evcil hayvan
+dog = evcil hayvan
+crocodile = timsah
+tiger = kaplan
+solda data sagda data
+map deyince sozluk akla gelsin
+sola unique lere key tekrarli olabilen sagdaki data lara value denir
+
+map te bir data stractir dir
+depolarken bu yapiya ihtiyac varsa map kullaniriz
+mesela ulkeler ve nufuslarini depolamamiz lazim burda sol unique sag tekrarli olabilir burda map kullaniriz
+mesela okul app imiz var ogrencilerin karne ort ni depolayacagiz sol unique sa[ tekrarli olabilir burda map kullanilmalidir

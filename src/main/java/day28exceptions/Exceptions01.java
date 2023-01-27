@@ -13,6 +13,7 @@ public class Exceptions01 {
           Application'larda "Memory" nin dolmasi "Error" dur.
           Iki tur memory var i)Stack Memory dolarsa "StackOverFlow Error" alirsiniz
                              ii)Heap Memory dolarsa "OutOfMemory Error" alirsiniz
+          *---Yazdiginiz kod calismadiginda nereye bakarsiniz? interviw sorusu
         5)Yazdiginiz kod calismadiginda problemi bulmak icin "Log" lara bakariz.
         6)if else kullanirsak olusabilecek her problemi spesifik olarak if parentezinin icine yazmamiz gerekir.
           Bu da ciddi bir matematik bilgisi gerektirir, ve yazacagimiz kodu cok uzatir.

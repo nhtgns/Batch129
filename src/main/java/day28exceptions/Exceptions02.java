@@ -21,6 +21,7 @@ public class Exceptions02 {
             System.out.println(e.getMessage());
         }
         System.out.println(intS + 1 );
+        //Bir varible in data type i Exceptions ise o non primite demektir. bu variable ayni zamanda bir object tir
     }
 
     }
