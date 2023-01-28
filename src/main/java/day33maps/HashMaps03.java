@@ -5,11 +5,6 @@ import java.util.HashMap;
 
 public class HashMaps03 {
     public static void main(String[] args) {
-//
-//        package day33maps;
-//
-//import java.util.Arrays;
-//import java.util.HashMap;
 
 
 

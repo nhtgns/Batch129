@@ -85,18 +85,18 @@ public class HashMaps01 {
 //            salaries.putIfAbsent(teacherName, 11000);
 //        }
 //               System.out.println(salaries);//{Tom=9900, Veli=9000, Ayse=5000, Kemal=11000, Ali=8000}
-        String teacherName = "Tom";
+        String teacherName = "Kemal";
         if (salaries.keySet().contains(teacherName)) {
             salaries.put(teacherName, 12000);
         } else {
             salaries.putIfAbsent(teacherName, 11000);
         }
-        System.out.println(salaries);//{Tom=12000, Veli=9000, Ayse=5000, Ali=8000}
+        System.out.println("Kemal:" + salaries);//{Tom=12000, Veli=9000, Ayse=5000, Ali=8000}
 
         //replace met
         hm.replace("USA", 400000000, 500000000);
         System.out.println(hm);//{null=18000000, Myanmar=null, USA=500000000, Bhutan=35000000, Germany=85000000, Albania=2800000, India=700000000}
-        hm.replace("Bhutan", 35, 50);
+        hm.replace("Bhutan", 350000, 5000000);
         System.out.println("yeni :" + hm);
 
         //getOrDefault() olan key'lerin degerini verir, olmayan key'ler icin de sizin ikinci parametreye yazdiginiz degeri verir
@@ -105,7 +105,9 @@ public class HashMaps01 {
 
         //Map'i Set'e çevirdiğimizde Set'in bütün özelliklerini kullanabiliriz. Mesela loop gibi.
         //entrySet() methodunu kullandığınzda elde ettiğiniz Set'in elemanları "<Map.Entry<String,Integer>" şeklinde bir Map olur. Bu yüzden
-        //elemanlar için Map methodları kullanılabilir
+        //elemanlar için Map methodları kullanılabilir.mesela loop gibi
+        //entryset methodu nu kullandiginizda elde ettiginiz Set in elemanlari "Map.Entry<String, Integer> "seklindebir Map olur.
+        //Bu yuzden elemanlar icin map methodlari kullanilabilir
 
         Set<Map.Entry<String, Integer>> myEntries = hm.entrySet(); //Map i set e cevirdik, cunku setlerin methodlarini kullandik.
         System.out.println(myEntries);//[null=18000000, Myanmar=null, USA=500000000, Bhutan=35000000, Germany=85000000, Albania=2800000, India=700000000]
@@ -113,13 +115,17 @@ public class HashMaps01 {
         //Ex 3: Ulke ismindeki character sayisini ulke nufusuna ekleyen ve sonucu console'a yazdiran code u yaziniz
         //Normalde map lerde loop kullanilmaz ama burada set e cevirdik map i
 
-        for (Map.Entry<String, Integer> w : myEntries) {
-            if (w.getValue() != null && w.getKey() != null) {
-                int toplam = w.getValue() + w.getKey().length();
-                System.out.println(toplam);//500000003...
+        Set<Map.Entry<String,Integer>> myulke = hm.entrySet();
+
+        for (Map.Entry<String, Integer> w : myulke) {
+            if (w.getValue() != null && w.getKey() != null){
+                Integer toplam = w.getValue() + w.getKey().length();
+                System.out.println(toplam);
             }
 
         }
+
+
 
     }
 }
