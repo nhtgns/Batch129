@@ -62,6 +62,7 @@ public class HashMaps01 {
         hm.replace("Bhutan", 35);
         System.out.println(hm);//{null=18000000, Myanmar=null, USA=400000000, Bhutan=35000000, Germany=85000000, Albania=2800000}
 
+        //yoksa ekle demek, putIfabsent
         hm.putIfAbsent("India", 700000000);//{null=18000000, Myanmar=null, USA=400000000, Bhutan=35000000, Germany=85000000, Albania=2800000}
 
         //Example 2: Yeni ogretmenin maasi standart(10000) ucretten 1000TL fazla, eski ogretmenin maasi standart ucretten 2000TL fazla olsun.
@@ -85,13 +86,13 @@ public class HashMaps01 {
 //            salaries.putIfAbsent(teacherName, 11000);
 //        }
 //               System.out.println(salaries);//{Tom=9900, Veli=9000, Ayse=5000, Kemal=11000, Ali=8000}
-        String teacherName = "Kemal";
+        String teacherName = "Tom";
         if (salaries.keySet().contains(teacherName)) {
             salaries.put(teacherName, 12000);
         } else {
             salaries.putIfAbsent(teacherName, 11000);
         }
-        System.out.println("Kemal:" + salaries);//{Tom=12000, Veli=9000, Ayse=5000, Ali=8000}
+        System.out.println("Tom:" + salaries);//{Tom=12000, Veli=9000, Ayse=5000, Ali=8000}
 
         //replace met
         hm.replace("USA", 400000000, 500000000);
