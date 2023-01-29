@@ -1,0 +1,25 @@
+/*
+     1)Lambda "Functional programming" dir, digeri "Structured Programming"
+     2)"Functional programming" "Ne yapmak gerekir?(What to do?)" ile ilgilenir "Nasil yapmak gerekir?(How to do?)" ile ilgilenmez.
+     3)"Functional programming" Collection'lar ve Array'lerde kullanilir.
+     4)Lambda, Java'ya "Java 8"de eklendi.
+
+     "stream()" elemanlari yukardan asagiya dizer."Lambda" list'i "stream" e cevirir öyle calisir.
+     "filter()" filtrelemek icin kullanilir.
+     "map()" u var olan elemani degistirmek icin kullanilir.
+     "distinct()" u tekrarli elemanlari sadece bir kere gosterir ve tekrarsizlari olduklari kadar gosterir.
+     Note : Distinct methodu ilk baslara konulursa "Lambda" ya daha az is yaptirmis oluruz.
+     "reduce()" u  kullanildiginda cok sayidaki deger bir tane degere donusmus olur.
+     Orn; reduce(0,(t,u)->t+u) ==> "t" ilk degeri "sifir" dan alir, daha sonraki degerleri toplamanin sonucundan alir.
+     "u" ise degerlerini her zaman "stream" den alir
+     get()==> methodu optional data type'ini Integer'a cevirir.
+
+     sorted(Comparator.reverseOrder())methodu ==> elemanlari buyukten kucuge siralar.
+ */
+ /* stream() elemanları dikey yazdırır
+         filter() filtreleme yapar kurala göre
+         map()    varolan elemani degıstırmek icin kullanilir(set methoduna benzer)
+         distinct() tekrarsız elemanları secer*/
+         //redece() coklu degerleri azaltmak icin kullanilir.
+                 //redece() coklu degerleri azaltmak icin kullanilir.
+         //reduce(0,(t,u)->t+u);==> basta toplam=0, "t ve u degeri verecegiz sana java ve sen onlari toplayacaksin."
