@@ -7,7 +7,7 @@ public class Exceptions01 {
         String str = "";
 
         try {
-            str = (String) obj;//Birbirine donusturulemeyecek data type'larini donusturmekte israr ederseniz Java "ClassCastException" atar
+            str = (String) obj;                           //Birbirine donusturulemeyecek data type'larini donusturmekte israr ederseniz Java "ClassCastException" atar
             System.out.println(str);                      //"Class i cast yapma hatasi" yapiliyor burada, Object class i stringe cevirerek
 
         }catch(ClassCastException e){

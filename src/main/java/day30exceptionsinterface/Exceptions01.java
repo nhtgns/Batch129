@@ -19,7 +19,7 @@ public class Exceptions01 {
   "try block" + coklu "catch block" mumkundur
   "try block" + coklu "catch block" + 1 finally block mumkundur
   "try block" + 1 "finally block" mumkundur
-4)Coklu "finally block" kullanilamaz
+4)Coklu "finally block" kullanilamaz.
      */
 
     public static void main(String[] args) {

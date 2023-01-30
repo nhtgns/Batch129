@@ -13,7 +13,7 @@ public class Exceptions03 {
           IOException tum input ve output islemleri ile ilgilidir.
         3)IOException Class, FileNotFoundException Class'in parent'idir.
         4)Istenirse FileNotFoundException yerine IOException da kullanilabilir.
-        5)IOException Class ve FileNotFoundException beraber kullanilacaksa FileNotFoundException ustte, IOException altta kullanilmalidir.
+        5)IOException Class ve FileNotFoundException beraber kullanilacaksa FileNotFoundException ustte, IOException altta kullanilmalidir
          */
 
 

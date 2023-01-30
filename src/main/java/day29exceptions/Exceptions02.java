@@ -35,7 +35,7 @@ public class Exceptions02 {
     }
     // "throw" keyword bir methodun bods i icinde istedigimiz yerde,istedigimiz kadar,istedigimiz kosulda exceptions atmamizi saglar
     //"throw" keyword yazildiktan sonra bir "Exception Class object" i olusturulur
-    //Exceptions Class constructor inin parantezi icine istediginiz Exception mesajini yazabilirsiniz
+    //Exceptions Class constructor inin parantezi icine istediginiz Exception mesajini yazabilirsiniz.
     public static  void printAge (int age){
         if(age < 0 ){
             throw new IllegalArgumentException("Age cannot be negative");//"kuraldisi sayiargument hatasi" aldik.

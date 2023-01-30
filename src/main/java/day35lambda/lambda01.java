@@ -10,12 +10,12 @@ public class lambda01 {
          /*
         1)Lambda "Functional programming" dir, digeri "Structured Programming"
         2)"Functional programming" "Ne yapmak gerekir?(What to do?)" ile ilgilenir "Nasil yapmak gerekir?(How to do?)" ile ilgilenmez.
-        3)"Functional programming" Collection'lar ve Array'lerde kullanilir.
+       *** 3)"Functional programming" Collection'lar ve Array'lerde kullanilir.
         4)Lambda, Java'ya "Java 8"de eklendi.
 
         "stream()" elemanlari yukardan asagiya dizer."Lambda" list'i "stream" e cevirir öyle calisir.
         "filter()" filtrelemek icin kullanilir.
-        "map()" u var olan elemani degistirmek icin kullanilir.
+        "map()" u var olan elemani degistirmek icin kullanilir. carpma , kup gibi
         "distinct()" u tekrarli elemanlari sadece bir kere gosterir ve tekrarsizlari olduklari kadar gosterir.
          Note : Distinct methodu ilk baslara konulursa "Lambda" ya daha az is yaptirmis oluruz.
         "reduce()" u  kullanildiginda cok sayidaki deger bir tane degere donusmus olur.
@@ -70,24 +70,24 @@ public class lambda01 {
 
     //1)Create a method to print the list elements on the console in the same line with a space between two consecutive elements.(Structured)
     //  Bir list'teki elemanlari ayni satirda aralarina bosluk koyarak yazdiran method'u olusturunuz.(Structured)
-    public static void printElements1(List<Integer> nums){
-        for(Integer w : nums){
+    public static void printElements1(List<Integer> nums) {
+        for (Integer w : nums) {
             System.out.print(w + " ");
         }
     }
 
     //2)Create a method to print the list elements on the console in the same line with a space between two consecutive elements.(Functional)
     //  Bir list'teki elemanlari ayni satirda aralarina bosluk koyarak yazdiran method'u olusturunuz.(Functional)
-    public static void printElements2(List<Integer> nums){
+    public static void printElements2(List<Integer> nums) {
         //12 9 131 14 9 10 4 12 15
         nums.stream().forEach(t -> System.out.print(t + " "));
     }
 
     //3)Create a method to print the "even" list elements on the console in the same line with a space between two consecutive elements.(Structured)
     //  Bir list'teki cift elemanlari ayni satirda aralarina bosluk koyarak yazdiran method'u olusturunuz.(Structured)
-    public static void printEvenElements1(List<Integer> nums){
-        for(Integer w : nums){
-            if(w%2==0){
+    public static void printEvenElements1(List<Integer> nums) {
+        for (Integer w : nums) {
+            if (w % 2 == 0) {
                 System.out.print(w + " ");
             }
         }
@@ -95,95 +95,115 @@ public class lambda01 {
 
     //4)Create a method to print the "even" list elements on the console in the same line with a space between two consecutive elements.(Functional)
     //  Bir list'teki cift elemanlari ayni satirda aralarina bosluk koyarak yazdiran method'u olusturunuz.(Functional)
-    public static void printEvenElements2(List<Integer> nums){
+    public static void printEvenElements2(List<Integer> nums) {
         nums.//12 9 131 14 9 10 4 12 15
                 stream().
-                filter(t->t%2==0).
-                forEach(t-> System.out.print(t + " "));
+                filter(t -> t % 2 == 0).
+                forEach(t -> System.out.print(t + " "));
     }
 
     //5)Create a method to print the square of odd list elements on the console in the same line with a space between two consecutive elements.
     //  Bir list'teki "tek sayi" olan elemanlarin "kare"lerini ayni satirda aralarina bosluk koyarak yazdiran method'u olusturunuz.(Functional)
-    public static void printSquareOfOddElements(List<Integer> nums){
+    public static void printSquareOfOddElements(List<Integer> nums) {
         nums.
                 stream().
-                filter(t->t%2!=0).
-                map(t->t*t).
-                forEach(t-> System.out.print(t + " "));
+                filter(t -> t % 2 != 0).
+                map(t -> t * t).
+                forEach(t -> System.out.print(t + " "));
     }
 
     //6)Create a method to print the "cube" of "distinct" "odd" list elements on the console in the same line with a space between two consecutive elements.
     //  Bir list'teki "tek sayi" olan elemanlarin "kup"lerini "tekrarsiz" olarak ayni satirda aralarina bosluk koyarak yazdiran method'u olusturunuz.(Functional)
-    public static void printCubeOfDistinctOddElements(List<Integer> nums){
+    public static void printCubeOfDistinctOddElements(List<Integer> nums) {
         nums.
                 stream().
                 distinct().
-                filter(t->t%2!=0).
-                map(t->t*t*t).
-                forEach(t-> System.out.print(t + " "));
+                filter(t -> t % 2 != 0).
+                map(t -> t * t * t).
+                forEach(t -> System.out.print(t + " "));
     }
 
+    //essiz
     //7)Create a method to calculate the "sum" of the "squares" of "distinct" "even" elements
-    public static void printSumOfSquaresOfDistinctEvenElements(List<Integer> nums){
-        Integer sum = nums.stream().distinct().filter(t->t%2==0).map(t->t*t).reduce(0, (t, u)->t+u);
-        System.out.println(sum);
+    //reduce () methoduyla coklu durumlar tek e dusurulur.carpim ,toplam... olarak karsimiza cikar
+    public static void printSumOfSquaresOfDistinctEvenElements(List<Integer> nums) {
+        Integer sum = nums.stream().distinct().filter(t -> t % 2 == 0).map(t -> t * t).reduce(0, (t, u) -> t + u);//sana 2 sayi veriyrum bunu topla dedim
+        System.out.println(sum); //456                                          //bu 0, sum konteynerindaki 0 gibi
     }
 
+    //carpim
     //8)Create a method to calculate the "product" of the "square" of "distinct" "even" elements
-    public static void printProductOfSquareOfDistinctEvenElements(List<Integer> nums){
-        Integer product = nums.stream().distinct().filter(t->t%2==0).map(t->t*t).reduce(1, (t,u)->t*u);
-        System.out.println(product);
+    public static void printProductOfSquareOfDistinctEvenElements(List<Integer> nums) {
+        Integer product = nums.
+                stream().
+                distinct().
+                filter(t -> t % 2 == 0).
+                map(t -> t * t).
+                reduce(1, (t, u) -> t * u);
+        // 1 sayisi carmada verdigimiz etkisiz eleman
+        System.out.println("son :" + product); //son :45158400
     }
 
     //9)Create a method to find the "maximum value" from the list elements
     //1.Yol:
-    public static void getMaxValue1(List<Integer> nums){
+    public static void getMaxValue1(List<Integer> nums) {
         //Maximum degeri ararken Integer.MIN_VALUE kullanmak genel partiktir.
         //Minimum degeri ararken Integer.MAX_VALUE kullanmak genel partiktir.
-        Integer max = nums.stream().distinct().reduce(Integer.MIN_VALUE, (t,u)->t>u ? t : u);
-        System.out.println(max);
+        Integer max = nums.
+                stream().
+                distinct().
+                reduce(Integer.MIN_VALUE, (t, u) -> t > u ? t : u);
+        //t ilk degerini  min value den aliyor,cunku o listede yok,t en kucuk olarak garantilemenin yolu -integer degerini vermek
+        System.out.println(max);  //131
     }
+
     //2.Yol:
-    public static void getMaxValue2(List<Integer> nums){
-        Integer max = nums.stream().distinct().reduce(nums.get(0), (t,u)->t>u ? t : u);
+    public static void getMaxValue2(List<Integer> nums) {
+        Integer max = nums.stream().distinct().reduce(nums.get(0), (t, u) -> t > u ? t : u);
+        //burada 0. indeksteki elemani aliyoruz
         System.out.println(max);
     }
 
     //3.Yol:
-    public static void getMaxValue3(List<Integer> nums){
-        Integer max = nums.stream().distinct().sorted().reduce((t,u)->u).get();
+    public static void getMaxValue3(List<Integer> nums) {
+        Integer max = nums.
+                stream().
+                distinct().
+                sorted().
+                reduce((t, u) -> u).get(); //2 eleman gorursen 2.yi al dedik, o da buyuk olan sayiyi verir
         System.out.println(max);
+        //get() , Optional data type ini integer a cevirir. baslangic degeri olmayan reduce kullanilir get()
     }
 
     //10)Create a method to find the minimum value from the list elements
     //1.Yol:
-    public static void getMinValue1(List<Integer> nums){
-        Integer min = nums.stream().distinct().reduce((t,u)->t>u ? u : t).get();
+    public static void getMinValue1(List<Integer> nums) {
+        Integer min = nums.stream().distinct().reduce((t, u) -> t > u ? u : t).get();
         System.out.println(min);
     }
 
     //2.Yol:
-    public static void getMinValue2(List<Integer> nums){
-        Integer min = nums.stream().distinct().sorted(Comparator.reverseOrder()).reduce((t, u)->u).get();
+    public static void getMinValue2(List<Integer> nums) {
+        Integer min = nums.stream().distinct().sorted(Comparator.reverseOrder()).reduce((t, u) -> u).get();
         System.out.println(min);
     }
 
     //3.Yol:
-    public static void getMinValue3(List<Integer> nums){
-        Integer min = nums.stream().distinct().sorted().reduce((t,u)->t).get();
+    public static void getMinValue3(List<Integer> nums) {
+        Integer min = nums.stream().distinct().sorted().reduce((t, u) -> t).get();
         System.out.println(min);
     }
 
     //4.Yol:
-    public static void getMinValue4(List<Integer> nums){
-        Integer min = nums.stream().distinct().reduce((t,u)->Math.min(t,u)).get();
+    public static void getMinValue4(List<Integer> nums) {
+        Integer min = nums.stream().distinct().reduce((t, u) -> Math.min(t, u)).get();
         System.out.println(min);
     }
 
     //11)Create a method to find the minimum value which is greater than 7 and even from the list
     //   12 9 131 14 9 10 4 12 15 ==> 10 <-- 7 den buyuk en kucuk cift sayi
-    public static void getMinGreaterThanSevenEven(List<Integer> nums){
-        Integer min = nums.stream().filter(t->t>7 && t%2==0).sorted().reduce((t,u)->t).get();
+    public static void getMinGreaterThanSevenEven(List<Integer> nums) {
+        Integer min = nums.stream().filter(t -> t > 7 && t % 2 == 0).sorted().reduce((t, u) -> t).get();
         System.out.println(min);
 
     }
