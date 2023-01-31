@@ -1,0 +1,54 @@
+1. Set<E>
+Set'in karakteristik özelliği aynı elemandan birden fazla olmasına izin vermemesi ve birden fazla null eleman kabul etmemesidir.
+ Yani e1 ve e2 elementleri için e1.equals(e2) ise bu iki eleman aynı Set içinde barınamaz.
+
+ ● HashSet<E>
+HashSet<E>'te veriler hashleme yöntemi ile tutulur. Verilerin sırasının korunacağını garanti etmez.
+ Yani önce e1, sonra e2 elementini kaydedip e2, e1 sırasında çekebilirsiniz.
+ Aynı zamanda HashSet<E> non-synchronized olduğu için birden fazla
+ thread aynı anda bir HashSet'e erişip değiştirmeye çalışırsa problem yaşamamak için
+  manuel bir çözüm olarak synchronized erişim sağlamalıyız.
+
+
+    ● LinkedHashSet<E>
+   HashSet'ten tek farkı, eklenen elementlerin ekleme sırasına göre tutulmasıdır.
+   (Insertion order) Tekrarlı element eklendiğinde ilk eklenen element bundan etkilenmez.
+
+
+   ● TreeSet<E>
+   TreeSet'lerde elementler artan sıralamayla, yani ascending order ile tutulur.
+    null element kabul etmez. Eklenmeye çalışılırsa NullPointerException hatası verir.
+
+
+    2. List<E>
+    List'in karakteristik özellikleri tekrarlı elementlere izin vermesi,
+     elementleri ekleme sırasına göre tutması ve istediğimiz index'e element eklememize izin vermesidir.
+
+
+     ● ArrayList<E>
+     Collection framework'te en çok kullanılan class'tır. List özelliklerini barındırır.
+
+     ArrayList -> Ankara Amasya Sivas Isparta İzmir Eskişehir Amasya
+
+
+     ● LinkedList<E>
+     Sonuçları bakımından ArrayList ile aynıdır. Fakat aralarında bazı farklar mevcuttur.
+      Arama işlemlerinde LinkedList O(n) iken ArrayList'te O(1)'dir. Silme işlemlerinde ise ArrayList O(n) iken LinkedList O(1)'dir.
+       Ekleme işlemleri de aynı sonuçları verir. Dolayısıyla eğer ekleme ve silme işlemleri sık yapılacaksa LinkedList kullanmak daha avantajlıdır.
+       Arama işlemleri sık yapılacak ise de ArrayList daha avantajlıdır.
+
+
+       3. Queue<E>
+       Queue interface'i FIFO (first in first out) prensibini uygular. Yani sıraya ilk giren kişi ilk çıkar.
+
+       4. Map<K, V>
+       Map interface'i collection sınıfına dahil değildir fakat benzer amaçlar taşıdığı aynı başlık altında öğretilir.
+        Map'ler eşleme tablolarıdır. Bir Map'te tekrarlı key olamaz. Tüm value'lar bir key ile eşlenir ve bu key ile çağrılır.
+
+
+
+       ● HashMap<K, V>
+       HashMap'ler sıralamayı garanti etmez. null key ve null value kabul eder.
+
+       ● TreeMap<K, V>
+       HashMap'lerden farkı, elementleri artan sıralama (ascending) ile tutmasıdır.
