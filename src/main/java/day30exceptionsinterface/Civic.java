@@ -25,4 +25,9 @@ public class Civic implements Ac, Engine,Security {
      public void guvenlik() {
          System.out.println("guvenlik onceligimiz");
      }
+
+     @Override
+     public void saglamlik() {
+
+     }
  }

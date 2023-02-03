@@ -28,7 +28,7 @@ public class Exceptions01 {
         int b = 4;
         int c[] = {3, 6, 9, 12 };
 
-        m(c, a, b); //burada sayi yazmadik, cunku sayilari yukarida tanimladik.
+        m(c, a, b); //burada m () methodunu cagirdik ve  sayi yazmadik, cunku sayilari yukarida tanimladik.
 
     }
 

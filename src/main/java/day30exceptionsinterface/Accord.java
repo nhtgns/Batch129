@@ -17,4 +17,9 @@ public class  Accord implements Ac,Engine,Security{
     public void guvenlik() {
         System.out.println("Guvenlik onceligimiz");
     }
+
+    @Override
+    public void saglamlik() {
+
+    }
 }

@@ -10,5 +10,10 @@ public class HondaRunner {
         Accord myAccord = new Accord();
         myAccord.cool();
         //Methodlar object ismi ile cagrilir
+        //static variable lar direkt interface  ismi ile cagrilir
+
+        System.out.println(Ac.price);
+
+
     }
 }

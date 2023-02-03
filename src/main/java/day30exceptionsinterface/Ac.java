@@ -10,15 +10,19 @@ public interface Ac {
     //bagli degildir, hersey Child Class'lar icin mecburidir. Bu yuzden interface'lere
     //"to-do list" de denir.
 
-    //interface'lerdeki tum method'lar otomatik olarak "public"dir, "abstract"dir, "static" degildir.
+    //interface'lerdeki tum method'lar otomatik olarak "public"dir, "abstract"dir, "static" tir
 
     //interface'lerdeki variabler otomatik olarak "public" dir, "static" dir, "final" dir.
+    //static ne demek, olusturulan methoda ulasmak icin object olusturmaya gerek yok, class ismiyle ulasilir
+    //return type i olmak zorundadir bir methodun. void, int gibi
 
-    void cool(); // interface lerin icine concret metod koyulmaz.
+    void cool(); // interface lerin icine concret metod koyulmaz. method body si bostur
 
 
    // coklu isteklere java musaade etmez, ye, ic uyu gibi olmali.
     void run();
+
+    int price =2000; // interface icindeki tum variable lar static, publi ve final dir, final inizialeiz edilmek zorunda
 
 
 }
