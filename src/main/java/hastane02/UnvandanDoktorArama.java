@@ -1,89 +1,72 @@
 package hastane02;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class UnvandanDoktorArama {
 
+    public static void unvandanDoktora() {
+        VeriBankasi veribankasi = new VeriBankasi();
 
-    public static void unvandanDoktorArama() {
+
         Scanner input = new Scanner(System.in);
 
-        int counter = 0;
-
-        do{//burası
-
-            System.out.println("" +
-                    "\nBu menude uzmanlıklarına göre doktorlarin listesini göreceksiniz");
 
 
-            System.out.println("" +
-                    "\n Alergist'ler icin..............1 " +
-                    "\n Norolog'lar....................2 " +
-                    "\n Genel Cerrahlar için...........3" +
-                    "\n Cocuk Doktorları icin..........4" +
-                    "\n Dahiliye Doktorları icin.......5 " +
-                    "\n Kardiyologlar için.............6 " +
-                    "\n Ana menüye dönmek için ........7"+
-                    "\n Randevu icin...................8");
+int counter = 0;
 
-            VeriBankasi obj = new VeriBankasi();
 
-            String strKarar= input.next();
+        do{
+            System.out.println(" " +
+                    "\n Norolog icin        1" +
+                    "\n Allergist icin      2" +
+                    "\n Genel Cerrah icin   3" +
+                    "\n Cocuk Doktoru icin  4" +
+                    "\n Dahiliye icin       5" +
+                    "\n Kardiyolog icin     6" +
+                    "\n Cikmak icin         7  a basiniz");
 
-            int kararDeger= String.valueOf(strKarar).replaceAll("[\\D]","").length();
+            String unvan = input.nextLine();
 
-            if (kararDeger<1){
-                System.out.println("Hatalı giriş yaptınız. Harf veya kelime ile giriş yapılamaz");
-                continue;
-            }
-            int karar =0;
-            try {
-                karar = Integer.parseInt(strKarar);
-            }catch (NumberFormatException e) {
-                System.out.println("Sadece rakamla giris yapabilirsiniz.");
-            }
-            if (karar>0 &&karar<9 ) {
 
-                switch (karar) {
+            switch (unvan) {
+            case "1":
+                System.out.println("Norolog");  //String
+                System.out.println("doktoradi :" + " " + veribankasi.doctorIsimleri[Arrays.asList(veribankasi.unvanlar).indexOf("Norolog")]);
+                System.out.println("doktorsoyadi :" + " " + veribankasi.doctorSoyIsimleri[Arrays.asList(veribankasi.unvanlar).indexOf("Norolog")]);
+                break;
+            case "2":
+                System.out.println("Allergist");  //String
+                System.out.println("doktoradi :" + " " + veribankasi.doctorIsimleri[Arrays.asList(veribankasi.unvanlar).indexOf("Allergist")]);
+                System.out.println("doktorsoyadi :" + " " + veribankasi.doctorSoyIsimleri[Arrays.asList(veribankasi.unvanlar).indexOf("Allergist")]);
+                break;
+            case "3":
+                System.out.println("Genel Cerrah");  //String
+                System.out.println("doktoradi :" + " " + veribankasi.doctorIsimleri[Arrays.asList(veribankasi.unvanlar).indexOf("Genel Cerrah")]);
+                System.out.println("doktorsoyadi :" + " " + veribankasi.doctorSoyIsimleri[Arrays.asList(veribankasi.unvanlar).indexOf("Genel Cerrah")]);
+                break;
 
-                    case 1:
-                        System.out.println("Dr. " + obj.doctorIsimleri[0] + "   " + obj.doctorSoyIsimleri[0] + "  Ünvani : " + obj.unvanlar[0]);
-                        break;
-                    case 2:
-                        System.out.println("Dr. " + obj.doctorIsimleri[1] + "  " + obj.doctorSoyIsimleri[1] + "  Ünvani : " + obj.unvanlar[1]);
-                        break;
-                    case 3:
-                        System.out.println("Dr. " + obj.doctorIsimleri[2] + "  " + obj.doctorSoyIsimleri[2] + "  Ünvani : " + obj.unvanlar[2]);
-                        break;
-                    case 4:
-                        System.out.println("Dr. " + obj.doctorIsimleri[3] + "  " + obj.doctorSoyIsimleri[3] + "  Ünvani : " + obj.unvanlar[3]);
-                        break;
-                    case 5:
-                        System.out.println("Dr. " + obj.doctorIsimleri[4] + "  " + obj.doctorSoyIsimleri[4] + "  Ünvani : " + obj.unvanlar[4]);
-                        break;
-                    case 6:
-                        System.out.println("Dr. " + obj.doctorIsimleri[5] + "  " + obj.doctorSoyIsimleri[5] + "  Ünvani : " + obj.unvanlar[5]);
-                        break;
-                    case 7:
-               //         Randevu.slowPrint("Ana menüye yönlendiriliyorsunuz",50);
-                        System.out.println();
-                        counter++;//burası
-                        break;
-                    case 8:
-              //          Randevu.randevuOlusturma();
-                        break;
-                    default:
-                        System.out.println("Hatalı giris. Girisinizi belirtilen sayı aralığında yapınız");//buraya seçenekler dışında bir değer girdiniz
-                }
-            }
-            else{
-                System.out.println("Hatali giris yaptiniz. Girişinizi belirtilen sayı aralığında yapınız ");//buraya seçenekler dışında bir değer girdiniz
+                case "7":
+                    System.out.println("Cikisi siz istediniz");
+                    break;
 
+            default:
+                System.out.println("Hatali giris yaptiniz");
 
             }
 
-        }while (counter==0);//burası
-    }
-}
+            counter++;
+    }while (counter == 0);
+
+
+        }
+
+
+
+
+        }
+
+
+
 
 

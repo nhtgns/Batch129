@@ -1,223 +1,112 @@
 package hastane02;
 
+import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Hastane extends VeriBankasi{
-    public static void menuGoster() {
-        System.out.println("\n***QA TEAM-1 TIP MERKEZI ANA MENÜ***\n\n"
-                +"1-Hasta Arama Konsolu\n"
-                +"2-Hastalık Bilgisine Göre Doktor Arama Konsolu\n"
-                +"3-Uzmanlık Alanına Göre Doktor Arama Konsolu\n"
-                +"0-Cikis\n"
-                + "Yapmak istediginiz islemi seciniz\n");
-    }
+public class Hastane extends VeriBankasi {
 
-    public  static void start() {
+    public static void main(String[] args) {
 
-
-        slowPrint("\nTIP MERKEZİMİZE HOŞ GELDİNİZ", 100);
-        String secim;
-
-        do {
-            menuGoster();
-            Scanner scan = new Scanner(
-                    System.in
-            );
-            secim = scan.nextLine();
-            switch (secim) {
-                case "1":
-                    Hastane.hastaBulMethod() ;
-                    break;
-                case "2":
-                    Hastane.DoktorUnvan() ;
-                    break;
-                case "3":
-                    UnvandanDoktorArama.unvandanDoktorArama();
-                    break;
-                case "0":
-                    System.out.println("Sistemden cikisiniz gerceklesti.Tekrar bekleriz.");
-                    break;
-                default:
-                    System.out.println("Hatali giris yaptiniz.Lutfen tekrar deneyiniz.");
-
-            }
-        } while (!secim.equals("0"));
-
-    }
-
-    public static void hastaBulMethod() {
-        Hastane hastane = new Hastane();
-        Durum hastaDurum = new Durum();
-        String hastalik = "";
         Scanner input = new Scanner(System.in);
-        while (true) {
-            System.out.println("Hasta arama konsoluna hoşgeldiniz. Lütfen hastanın ID'sini giriniz.\nCikis icin 0'a basınız.");
-            int hastaId = 0;
-            try {
-                hastaId = input.nextInt();
-            } catch (Exception e) {
-                System.out.println("Kelime veya Harf girilemez. Hasta arama konsoluna yönlendirileceksiniz. ");
-                hastaBulMethod();
-            }
-            if (hastaId == 0) {
-                slowPrint("Ana menuye yönlendiriliyorsunuz",50);
+        System.out.println( " " +
+                "\n Hastaya ulasmak icin              1 " +
+                "\n Unvandan doktora ulasmak  icin    2 " +
+                "\n Hastaliktan doktora ulasmak icin  3 e tiklayiniz");
+        int secim = input.nextInt();
+
+
+        switch (secim){
+            case 1:
+                hastaBul();
                 break;
-            }
-            int hastaIdIndex = 0;
-            boolean hastaIdBul = false;
-            for (int i = 0; i < hastane.hastaIDleri.length; i++) {
-                if (hastane.hastaIDleri[i] == hastaId) {
-                    hastaIdBul = true;
-                    break;
-                }
-            }
-            if (!hastaIdBul) {
-                System.out.println("Hatali Id girdiniz. Hasta arama konsoluna yönlendirileceksiniz");
-                continue;
-            } else {
-                for (int i = 0; i < hastane.hastaIDleri.length; i++) {
-                    if (hastane.hastaIDleri[i] == hastaId) {
-                        hastaIdIndex = i;
-                        break;
-                    }
-                }
-                System.out.println("" +
-                        "\nHasta isim........: " + hastane.hastaIsimleri[hastaIdIndex]);
-                System.out.println("" +
-                        "\nHasta soyisim.....: " + hastane.hastaSoyIsimleri[hastaIdIndex]);
-                System.out.println("" +
-                        "\nHastalığı.........: " + hastane.durumlar[hastaIdIndex]);
-                hastalik = hastane.durumlar[hastaIdIndex];
-                System.out.println();
-            }
+            case 2:
+                UnvandanDoktorArama.unvandanDoktora();
+                break;
+            case 3:
 
+                break;
+            default:
+                System.out.println("Yanlis secimde bulundunuz");
 
-
-            hastaDurum.setAciliyet(false);
-            {
-                boolean risk = hastalik.equalsIgnoreCase("Çocuk hastalıklari") ||
-                        hastalik.equalsIgnoreCase("Kalp hastaliklari");
-                if (risk) {
-                    System.out.println("Hastanın durumu acil!. Doktora bilgi veriniz.");
-                } else {
-                    System.out.println("Hastanın durumu acil değil.");
-                }
-            }
-            hastaDurum.setAktuelDurum(hastalik);
-            {
-                boolean risk = hastalik.equalsIgnoreCase("Çocuk hastalıklari") ||
-                        hastalik.equalsIgnoreCase("Kalp hastaliklari");
-                if (risk) {
-                    System.out.println("Aktuel durum = Hastayı yatarak tedavi ediniz.");
-                } else {
-                    System.out.println("Aktuel durum = Hastayı ayakta tedavi ediniz.");
-                }
-            }
-            System.out.println();
-
-            System.out.println("Sorumlu doktor bilgileri.........: ");
-
-        //    HastaliktanDoktorArama.hastaliktanDoktor(hastaId);
 
         }
     }
 
 
-    public static void DoktorUnvan() {
 
+    public static void hastaBul() {
+
+        VeriBankasi veriBankasi = new VeriBankasi();
         Scanner input = new Scanner(System.in);
-        VeriBankasi obj = new VeriBankasi();
-        int counter = 0;
 
-        do {
-            System.out.println(" Bu menude sikayetinize göre gidebileceginiz  Doktorlarin listesini göreceksiniz");
+        // int bir arraydeki elemanin index numarasina nasil ulasirim ?
+        //int bir Arraydeki elemanin index numarasini binarySearch() methoduyla buldum  "Arrays.binarySearch(hastane.hastaIDleri, hastaId);"
+        // hastanin aciliyet durumuna nasil ulasir ve degistirebilirim?
+        // hastalik adinda degisken olusturup belirledik
 
-            System.out.println("" +
-                    "\n Alerji icin................1'e " +
-                    "\n Bas agrisi icin............2'e " +
-                    "\n Tirnak batmasi icin........3'e" +
-                    "\n Cocuk hastaliklari icin....4'e" +
-                    "\n Diyabet icin...............5'e " +
-                    "\n Kalp hastaligi icin........6'ya " +
-                    "\n Ana menüye dönmek için ....7'a tıklayınız ");
-
-            int durum = 0;
-
-            String strKarar = input.next();
-
-            int kararDeger = String.valueOf(strKarar).replaceAll("[\\D]", "").length();
-
-            if (kararDeger < 1) {
-                System.out.println("Hatalı giriş yaptınız. Harf veya kelime ile giriş yapılamaz");
-                continue;
-            }
-
-            int karar = 0;
-
-            try {
-                karar = Integer.parseInt(strKarar);
-            } catch (NumberFormatException e) {
-                System.out.println("Sadece rakamla giris yapabilirsiniz.");
-            }
+        Hastane hastane = new Hastane();
+        Durum durum = new Durum();
 
 
-            if (karar > 0 && karar < 8) {
-                switch (karar) {
+        int hastaId = 0;
+        int index = 0;
+        String hastalik = "";
+        String unvan = "";
 
-                    case 1:
-                        System.out.println(obj.durumlar[0] + "icin " + "Dr." + obj.doctorIsimleri[0] + " " + obj.doctorSoyIsimleri[0] + "Ünvani : " + obj.unvanlar[0]);
-                        break;
-                    case 2:
-                        System.out.println(obj.durumlar[1] + "icin " + "Dr." + obj.doctorIsimleri[1] + " " + obj.doctorSoyIsimleri[1] + "Ünvani : " + obj.unvanlar[1]);
-                        break;
-                    case 3:
-                        System.out.println(obj.durumlar[2] + "icin " + "Dr." + obj.doctorIsimleri[2] + " " + obj.doctorSoyIsimleri[2] + "Ünvani : " + obj.unvanlar[2]);
-                        break;
-                    case 4:
-                        System.out.println(obj.durumlar[3] + "icin " + "Dr." + obj.doctorIsimleri[3] + " " + obj.doctorSoyIsimleri[3] + "Ünvani : " + obj.unvanlar[3]);
-                        break;
-                    case 5:
-                        System.out.println(obj.durumlar[4] + "icin " + "Dr." + obj.doctorIsimleri[4] + " " + obj.doctorSoyIsimleri[4] + "Ünvani : " + obj.unvanlar[4]);
-                        break;
-                    case 6:
-                        System.out.println(obj.durumlar[5] + "icin " + "Dr." + obj.doctorIsimleri[5] + " " + obj.doctorSoyIsimleri[5] + "Ünvani : " + obj.unvanlar[5]);
-                        break;
-                    case 7:
-                       // Randevu.slowPrint("Ana menüye yönlendirileceksiniz", 50);
-                        System.out.println();
-                        counter++;//burası
-                        break;
-                    default:
-                        System.out.println("Hatalı giris. Sayi 0 ile 7 arasinda olmalidir ");
+        do { // hastabulma
+            System.out.println(" Hasta Id sini giriniz");
 
-                }
-            }
-            else{
-                System.out.println("Hatali giris yaptiniz Sayi 0 ile 8 arasında olmalıdır. ");//buraya seçenekler dışında bir değer girdiniz
+            hastaId = input.nextInt();
+
+            index = Arrays.binarySearch(hastane.hastaIDleri, hastaId); //elemanin index i bulundu
+            hastalik = hastane.durumlar[index];
+
+            System.out.println(  " hasta adi :" + hastane.hastaIsimleri[index] +
+                                 " " + " Soyadi :" + hastane.hastaSoyIsimleri[index] +
+                                 " " + "Hastalik durumu :" + hastane.durumlar[index]);
+
+//  int unvanindex = Arrays.asList(hastane.unvanlar).indexOf("Norolog");
+
+            aciliyetDurumuGoster(hastalik);
+            doktorBul(hastalik);
 
 
-            }
 
-        }while (counter == 0) ;
+        } while (true);
+
+    }//main
+public static void doktorBul(String hastalik){
+
+    Hastane hastane = new Hastane();
+
+ switch (hastalik){ // hastaliktan doktora ulasma
+        case "Alerji":
+            System.out.println("Allergist");  //String
+            System.out.println("doktoradi :"+ " " + hastane.doctorIsimleri[Arrays.asList(hastane.unvanlar).indexOf("Allergist")]);
+            System.out.println("doktorsoyadi :" + " " + hastane.doctorSoyIsimleri[Arrays.asList(hastane.unvanlar).indexOf("Allergist")]);
+            break;
+
+        case "Bas agrisi":
+            System.out.println("Norolog");
+            System.out.println("doktoradi :"+     " " + hastane.doctorIsimleri[Arrays.asList(hastane.unvanlar).indexOf("Norolog")]);
+            System.out.println("doktorsoyadi :" + " " + hastane.doctorSoyIsimleri[Arrays.asList(hastane.unvanlar).indexOf("Norolog")]);
+            break;
+}
     }
-    public static void slowPrint (String text,int delay){
-        for (char c : text.toCharArray()) {
-            System.out.print(c);
-            try {
-                Thread.sleep(delay);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+    public static void aciliyetDurumuGoster(String hastalik){
+
+
+        if (hastalik.equalsIgnoreCase("Çocuk hastalıklari") || hastalik.equalsIgnoreCase("Kalp hastaliklari")) {
+
+            System.out.println("Hastanin durumu riskli");
+        } else {
+            System.out.println("Acil bir durum yoktur.");
         }
     }
-
-
-
-
-
-
-
 
 
 
 }
+
+
