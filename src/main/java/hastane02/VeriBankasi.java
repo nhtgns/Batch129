@@ -25,6 +25,5 @@ public class VeriBankasi {
         this.hastaIDleri = hastaIDleri;
     }
 
-    public VeriBankasi() {
-    }
+
 }

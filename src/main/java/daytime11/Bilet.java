@@ -28,7 +28,7 @@ public class Bilet {
                 yasIndirimOrani = 0.3;
             }
 
-          /*  double dusulecekDeger=0;
+          /*  double dusulecekDeger=0
             dusulecekDeger =biletUcreti * yasIndirimOrani;  /// 100*0.1=10TL
             biletUcreti=biletUcreti-dusulecekDeger;
             NOT :Asagida tek satirda yapildi
