@@ -8,10 +8,11 @@ public class Hastane extends VeriBankasi {
     public static void menuGoster() {
 
         System.out.println(" " +
-                "\nTIP MERKEZI ANA MENUSU " +
+                "\n TIP MERKEZI ANA MENUSU " +
                 "\n Hastaya ulasmak icin              1 " +
                 "\n Unvandan doktora ulasmak  icin    2 " +
-                "\n Cikis icin                        3 e tiklayiniz");
+                "\n Randevu  icin                     3 " +
+                "\n Cikis icin                        4  e tiklayiniz");
 
     }
 
@@ -36,6 +37,10 @@ public class Hastane extends VeriBankasi {
                     break;
 
                 case 3:
+                    Randevu.randevu();
+                    break;
+
+                case 4:
                     System.out.println("Kendi isteginizle ciktiniz");
                     break;
 
@@ -44,7 +49,7 @@ public class Hastane extends VeriBankasi {
 
 
             }
-        } while (secim != 3);
+        } while (secim != 4);
     }
 
     public static void hastaBul() {
@@ -62,16 +67,29 @@ public class Hastane extends VeriBankasi {
 
 
         int hastaId = 0;
-        int index = 0;
+        int index   = 0;
         String hastalik = "";
         String unvan = "";
 
         while (true) { // hastabulma
             System.out.println(" Hasta Id sini giriniz");
+            System.out.println("Konsola gitmek icin 0 ya basiniz");
+try {
+    hastaId = input.nextInt();
+}catch (Exception e){
+    System.out.println("Harfle sisteme giris yapilmaz");
+    menuGoster();
+    break;
+}
+if (hastaId == 0){
+    System.out.println("Ana Menuye yonlendiriliyorsunuz");
+    menuGoster();
 
-            hastaId = input.nextInt();
+    break;
+}
 
-            index = Arrays.binarySearch(hastane.hastaIDleri, hastaId); //elemanin index i bulundu
+
+    index = Arrays.binarySearch(hastane.hastaIDleri, hastaId); //elemanin index i bulundu
 
             boolean hastaIdVarMi = false;
 
