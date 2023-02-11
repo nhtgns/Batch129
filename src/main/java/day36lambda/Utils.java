@@ -10,7 +10,7 @@ public class Utils {
     }
 
     public static String getLastChar (String s){
-        return    s.substring(s.length()-1);
+        return    s.substring(s.length()-1); // bu kod bana son karakteri string olarak verir
 
     }
     public static void printInTheSameLineWithSpace(Object obj){

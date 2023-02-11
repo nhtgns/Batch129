@@ -49,6 +49,7 @@ public class Lambda01 {
          System.out.println(printElementsLengthEven(list));
 
         printAllSortWithLastCharUpperDistinct1(list);
+        printAllSortWithLastCharUpperDistinct2(list);
 
     }
     //Example 1: Create a method to find the half of the elements greater than 5, distinct, in reverse order, in a list.
@@ -101,10 +102,11 @@ public class Lambda01 {
     public static void printAllSortWithLastCharUpperDistinct2(List<String> list) {
         list.stream().
                 distinct().
-                map(t -> t.toUpperCase()).
-                sorted(Comparator.comparing(Utils::getLastChar)).//t->t.charAt(t.length()-1 bu ifade lambda expression olarak adlandirilir
+                map(String::toUpperCase).
+                sorted(Comparator.comparing(Utils::getLastChar).reversed()).
+                forEach(Utils::printInTheSameLineWithSpace);//t->t.charAt(t.length()-1 bu ifade lambda expression olarak adlandirilir
 
-                forEach(t -> System.out.print(t + " "));
+
     }
 
 
