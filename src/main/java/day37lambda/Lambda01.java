@@ -19,6 +19,9 @@ public class Lambda01 {
         System.out.println(getsumFromsevenToseventy());         //2464
         System.out.println(getMultiplicationFromThreeToNine1()); //7181440
         System.out.println(getFactorial(5));                  //120
+        System.out.println(getSumOfEvensBetweenTwoInt(15, 4)); //36
+        System.out.println(getSumOfEvensBetweenTwoInt(12, 18));
+        System.out.println(getSumOfDigitsBetweenTwoInts(12, 18));
 
     }
     // Ex 1: verilen list teki tum sayilarin toplamini veren methodu olusturunuz
@@ -67,10 +70,23 @@ public class Lambda01 {
 
 
     }
-    // 5 : size verilen iki tam sayi arasindaki tum cift sayilarin toplamini veren kodu yaziniz
+    // 5 : Size verilen iki tam sayi arasindaki tum cift sayilarin toplamini veren kodu yaziniz
     public static int getSumOfEvensBetweenTwoInt (int a, int b){
 
-        return a;
+        if ( a >b ){
+            int temp = a;
+             a = b;
+             b = temp;
+        }
+
+        return IntStream.range(a+1, b).filter(Utils::isNumberEven).sum();
+    }
+    // 6 : Size verilen 2 tamsayi arasindaki tum tamsayilarin rakamlari toplamini veren kodu yaziniz
+    // 12 ve 18 verildi.  13,14,15,16,17 ==>  4 + 5+ 6+ 7+ 8 ==30
+    public static int getSumOfDigitsBetweenTwoInts (int a, int b){
+        return IntStream.range(a+1 , b).map(Utils::getSumOfDigits).sum();
+        //range() methodu burada 1. elemani aliyor, 2. elemani almiyor
+        //map() met  elemanlari degistirir ve tek tek elalir
     }
 
     }
