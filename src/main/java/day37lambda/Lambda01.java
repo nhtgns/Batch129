@@ -21,7 +21,7 @@ public class Lambda01 {
         System.out.println(getFactorial(5));                  //120
         System.out.println(getSumOfEvensBetweenTwoInt(15, 4)); //36
         System.out.println(getSumOfEvensBetweenTwoInt(12, 18));
-        System.out.println(getSumOfDigitsBetweenTwoInts(12, 18));
+        System.out.println(getSumOfDigitsBetweenTwoInts(120, 18));
 
     }
     // Ex 1: verilen list teki tum sayilarin toplamini veren methodu olusturunuz
@@ -81,9 +81,15 @@ public class Lambda01 {
 
         return IntStream.range(a+1, b).filter(Utils::isNumberEven).sum();
     }
-    // 6 : Size verilen 2 tamsayi arasindaki tum tamsayilarin rakamlari toplamini veren kodu yaziniz
+    //** 6 : Size verilen 2 tamsayi arasindaki tum tamsayilarin rakamlari toplamini veren kodu yaziniz
     // 12 ve 18 verildi.  13,14,15,16,17 ==>  4 + 5+ 6+ 7+ 8 ==30
     public static int getSumOfDigitsBetweenTwoInts (int a, int b){
+
+        if ( a >b ){
+            int temp = a;
+            a = b;
+            b = temp;
+        }
         return IntStream.range(a+1 , b).map(Utils::getSumOfDigits).sum();
         //range() methodu burada 1. elemani aliyor, 2. elemani almiyor
         //map() met  elemanlari degistirir ve tek tek elalir
