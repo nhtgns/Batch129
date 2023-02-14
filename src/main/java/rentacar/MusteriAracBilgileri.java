@@ -94,32 +94,6 @@ public class MusteriAracBilgileri {
 
 
 
-//    public static void aracListesi () {
-//
-//        AracTalebi arac1 = new AracTalebi("Mercedes", "E200", "Benzin", "Otomatik", 100);
-//        AracTalebi arac2 = new AracTalebi("BMW", "X5", "Dizel", "Manuel", 150);
-//        AracTalebi arac3 = new AracTalebi("Opel", "Astra", "Benzin", "Otomatik", 100);
-//        AracTalebi arac4 = new AracTalebi("Renault", "Megane", "Benzin", "Otomatik", 80);
-//        AracTalebi arac5 = new AracTalebi("Scoda", "Superb", "Dizel", "Manuel", 150);
-//        AracTalebi arac6 = new AracTalebi("Volkswagen", "Passat", "Benzin", "Otomatik", 200);
-//
-//
-//
-//        System.out.println("arac1.getGunlukUcret() = " + arac1.getGunlukUcret());
-//
-//        aracKiraList.add(arac1);
-//        aracKiraList.add(arac2);
-//        aracKiraList.add(arac3);
-//        aracKiraList.add(arac4);
-//        aracKiraList.add(arac5);
-//        aracKiraList.add(arac6);
-//
-//        AracTalebi[] yeniArr = aracKiraList.toArray(aracKiraList.toArray(new AracTalebi[0]));
-//        int counter=1;
-//        for (AracTalebi i : yeniArr) {
-//            System.out.println("Arac "+counter++ +" : " +i);
-//
-//        }
 
     }
 

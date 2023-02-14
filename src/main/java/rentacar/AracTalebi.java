@@ -15,8 +15,8 @@ public class AracTalebi {
     private LocalDate teslimGunu;
     private LocalTime teslimSaati;
 
-//    public AracTalebi() {
-//    }
+//    public AracTalebi()
+
 
     @Override
     public String toString() {
