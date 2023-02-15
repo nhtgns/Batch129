@@ -75,7 +75,7 @@ public class UserService {
         }
         return isValid;
     }
-    // password validation
+    //9 password validation
 
     private static boolean validatePassword(String password){
         boolean isValid;
@@ -104,6 +104,31 @@ public class UserService {
         }
         return isValid;
     }
+    public void register(){
+        System.out.println("Ad Soyad");
+        String name= input.nextLine();
+
+        //10  username unigue / essiz olmali
+        String username=getUserName();
+
+    }
+
+    //11 kullanicidan username alma
+
+    private String getUserName() {
+       String username ;
+       boolean existsUsername;
+        do {
+            System.out.println("Kullanıcı adı giriniz:");
+            username = input.next();
+            existsUsername=getUser(username)!=null;
+            if (existsUsername){
+                System.out.println("Bu username kullanılmış,farklı bir username deneyiniz.");
+            }
+        }while(existsUsername);
+        return username;
+    }
+    }
 
 
-}
+
