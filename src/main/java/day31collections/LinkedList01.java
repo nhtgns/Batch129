@@ -41,12 +41,14 @@ public class LinkedList01 {
         System.out.println(names);   //[Cuneyt, Steve, Carl, Raj, Megan, Brandon]
         names.addLast("Ajda");    //This method is equivalent to add.
         System.out.println(names);  //[Cuneyt, Steve, Carl, Raj, Megan, Brandon, Ajda]
+
         names.add(2, "Suleyman");  //LinkedList index yazsa da ,index kullanmaz,2. isimden sonra sulayman yazdirdi
         System.out.println( names);              //[Cuneyt, Steve, Suleyman, Carl, Raj, Megan, Brandon, Ajda]
+
         names.add("Suleyman");
         System.out.println(names); //[Cuneyt, Steve, Suleyman, Carl, Raj, Megan, Brandon, Suleyman]
 
-        names.remove("Ajda");// 2 tane ayni object varsa ilk siradakini siler. remove methodu loop kullandi, sirayla bakti
+        names.remove("Ajda");// 2 tane ayni object varsa ilk siradakini siler. remove methodu loop kullandi,ve loop kirildi
         System.out.println(names);//[Cuneyt, Steve, Suleyman, Carl, Raj, Megan, Brandon]
 
         names.remove(4); // 4 ten sonraki node u siliyor
