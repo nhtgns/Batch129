@@ -26,6 +26,8 @@ public class HashSet01 {
         hs.add(234);
         hs.add(78);
         hs.add(5);
+        hs.add(null);
+        hs.add(null);
         System.out.println(hs);//[5, 234, 12, 78] random siralama, rast gele demek,elemanlar rastgele siralandi
 
         int hc = hs.hashCode();
