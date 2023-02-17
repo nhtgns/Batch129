@@ -1,5 +1,5 @@
 package minibookstore;
-//2- product islemleri icin standart
+//2: product islemleri icin standart
 
 public interface ProductService {
 

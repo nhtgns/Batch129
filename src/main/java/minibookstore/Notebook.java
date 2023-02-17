@@ -1,5 +1,5 @@
 package minibookstore;
-//1c-  product  oz + brand, sheet,code
+//1c:  product  oz + brand, sheet,code
 public class Notebook extends Product{
 
     private  String brand;

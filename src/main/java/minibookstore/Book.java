@@ -1,5 +1,5 @@
 package minibookstore;
-// 1b- kitap oz: product   oz + authorName, publisher,isbn
+// 1b: kitap oz: product   oz + authorName, publisher,isbn
 public class Book extends Product{
 
     private String authorName;

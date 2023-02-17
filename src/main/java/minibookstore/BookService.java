@@ -60,7 +60,7 @@ public class BookService implements ProductService {
         } while (choice != 0);
 
     }
-    //6- kitaplari formatla yazdiralim
+    //6: kitaplari formatla yazdiralim
 
     @Override
     public void listProduct() {

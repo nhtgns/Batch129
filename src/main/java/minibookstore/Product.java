@@ -1,5 +1,5 @@
 package minibookstore;
-// 1 a- tum urunlerin ortak ozellikleri ve methodlari
+// 1a:  tum urunlerin ortak ozellikleri ve methodlari
 public class Product {
 
     private  static int count = 0;
