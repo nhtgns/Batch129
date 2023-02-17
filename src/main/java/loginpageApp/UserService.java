@@ -111,16 +111,18 @@ public class UserService {
         //10  username unigue / essiz olmali
         String username=getUserName();
 
+        // 11 email  / essiz unigue ve gecerli olmali
     }
 
-    //11 kullanicidan username alma
+    //10 a .  kullanicidan username alma
 
     private String getUserName() {
        String username ;
        boolean existsUsername;
+
         do {
             System.out.println("Kullanıcı adı giriniz:");
-            username = input.next();
+            username = input.next(); // bu kullanici adi daha once kullanilmis mi ?
             existsUsername=getUser(username)!=null;
             if (existsUsername){
                 System.out.println("Bu username kullanılmış,farklı bir username deneyiniz.");
@@ -128,6 +130,25 @@ public class UserService {
         }while(existsUsername);
         return username;
     }
+
+
+    //11 a-  kullanicidan email alma
+
+    private  String getEmail(){
+        String email;
+        boolean isValid;
+        do{
+
+            System.out.println(" Email giriniz");
+            email = input.next(); // email gecerli mi?
+            isValid = validateEmail(email);
+
+
+        }while (!isValid);
+            return email;
+
+    }
+
     }
 
 
