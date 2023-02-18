@@ -51,4 +51,4 @@ HashSet<E>'te veriler hashleme yöntemi ile tutulur. Verilerin sırasının koru
        HashMap'ler sıralamayı garanti etmez. null key ve null value kabul eder.
 
        ● TreeMap<K, V>
-       HashMap'lerden farkı, elementleri artan sıralama (ascending) ile tutmasıdır.
+       HashMap'lerden farkı, elementleri artan sıralama (ascending) ile tutmasıdır

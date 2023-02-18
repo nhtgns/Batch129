@@ -27,7 +27,8 @@ public class LinkedList01 {
       bir elemani bulmak icin en bastan tum elemanlar kontrol edilir bu da cok fazla is demektir.
 
          */
-        List<String> cityNames = new LinkedList<>();
+//        List<String> cityNames = new LinkedList<>();
+//        cityNames.add("Ali");
 
         LinkedList<String> names = new LinkedList<>();
         names.add("Steve");
@@ -36,6 +37,8 @@ public class LinkedList01 {
         names.add("Megan");
         names.add("Brandon");
         System.out.println(names);    //[Steve, Carl, Raj, Megan, Brandon]
+//        names.addAll(cityNames);
+//        System.out.println(names);
 
         names.addFirst("Cuneyt");
         System.out.println(names);   //[Cuneyt, Steve, Carl, Raj, Megan, Brandon]
@@ -52,17 +55,17 @@ public class LinkedList01 {
         System.out.println(names);//[Cuneyt, Steve, Suleyman, Carl, Raj, Megan, Brandon]
 
         names.remove(4); // 4 ten sonraki node u siliyor
-        System.out.println(" Carl siz : " + names);
+        System.out.println("4. elemandan sonraki silinir:"+ names);//: [Cuneyt, Steve, Suleyman, Carl, Megan, Brandon, Suleyman]
 
         String r1 = names.remove();   // Retrieves and removes the first element of this list. (Cut + Paste)
-        System.out.println(r1);      // cuneyt, ilk ele mani siliyor
-        System.out.println(names);// [Steve, Suleyman, Carl, Raj, Megan, Brandon] ilk node u sildi, o da acuneyt
+        System.out.println(r1); // Cuneyt   //ilk elemani siliyor ve burada Cuneyt i yazdiriyor, bak diyor ben cuneyt i sildim diyor
+        System.out.println(names);// [Steve, Suleyman, Carl, Raj, Megan, Brandon] ilk node u sildi, o da cuneyt ,artik linkedlist te cuneyt yok
 
         names.removeFirstOccurrence("Suleyman");// suleymanin ilk gorunumunu sil ,demek
         System.out.println(names);//[Steve, Carl, Raj, Megan, Brandon, Suleyman]  ilk suleyman gitti
 
         names.removeLastOccurrence("Suleyman"); // sonuncu suleyman i sil demek
-        System.out.println(names);// [Steve, Raj, Brandon, Ajda, Suleyman]
+        System.out.println(names);// [Steve, Raj, Brandon, Ajda,]
 
         String r2 = names.peek();  //Retrieves, but does not remove, the head (first element) of this list. kopyalama yapiyor (kopy + Paste)
                                    // Returns:the head of this list, or null if this list is empty. Ilk elemani silmeden verir
