@@ -50,11 +50,20 @@ public class Lambda04 {
      return sonuc;
     }
 
+    //SORU6: x sayisinin faktoriyelini bulunuz
+
+    public static int faktoriyel(int x){
+
+        int sonuc = IntStream.rangeClosed(1,x).reduce(1,(a,b)->a*b);
+
+        return sonuc;
 
 
 
 
 
+
+        }
 
 
 
