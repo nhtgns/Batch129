@@ -16,9 +16,10 @@ public class HashMaps01 {
         5) "Entry" ler "unique" dir cunku "key" kisimlari "unique" oldugundan herbir "Entry" digerlerinden farklidir.
 
         6)"HashMap" cok hizlidir cunku "HashMap" ler "entry" leri siralamak ile ugrasmazlar.
-        7)"HashMap"lerde bir tane "key" i "null" yapabilirsiniz.
-        8)"HashMap"lerde birden fazla  "value" u "null" yapabilirsiniz.
-        9)"HashMap" ler "multi thread" icin kullanilamaz ve "synchronization" yoktur.
+        7)"HashMap"lerde bir tane "key" i "null" yapabilirsiniz, cunku "key" ler tekrarsidir
+        8)"HashMap"lerde birden fazla  "value" u "null" yapabilirsiniz.´, cunku onlar tekrarli olabilir
+        9)"HashMap" ler "multi thread"(ayni anda birden cok is yapma becerisi) icin kullanilamaz ve
+        bu yuzden "synchronization"(birden fazla isi mantikli sira koyma da yoktur.
 */
         //Maps ,sozluk gibidir
         //HashMap nasil olustururlir

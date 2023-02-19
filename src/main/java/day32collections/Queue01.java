@@ -7,6 +7,7 @@ import java.util.Queue;
 public class Queue01 {
     public static void main(String[] args) {
   /*
+        Queue, kuyruk demek
         "Queue" larda ilk gelen ilk isleme girer.(First In First Out ==> FIFO)
          Bazen de son gelen ilk isleme girer.(Last In First Out ==> LIFO)
          "Deque" "Double Ended Queue" hem "FIFO" hem de "LIFO" icin kullanilir.
@@ -18,43 +19,42 @@ public class Queue01 {
           siralama hakkiniz olur.
     */
 
+        Queue<String> myQueue = new LinkedList<>();
+        myQueue.add("Milk");
+        myQueue.add("Butter");
+        myQueue.add("Jam");
+        myQueue.add("Egg");
+        myQueue.add("Luxury water");
 
+        System.out.println(myQueue);// [Milk, Butter, Jam, Egg, Luxury water]
 
-            Queue<String> myQueue = new LinkedList<>();
-            myQueue.add("Milk");
-            myQueue.add("Butter");
-            myQueue.add("Jam");
-            myQueue.add("Egg");
-            myQueue.add("Luxury water");
+        //Retrieves and removes the "head of this queue", or returns "null" if this queue is empty. Cut- paste
+        myQueue.poll();
+        System.out.println("poll ile :" + myQueue);  //poll ile :[Butter, Jam, Egg, Luxury water]
 
-            System.out.println(myQueue);// [Milk, Butter, Jam, Egg, Luxury water]
+        //Retrieves and removes the head of this queue.
+        //This method differs from poll() only in that it throws an "exception" if this queue is empty. Cut- paste
+        //Returns:the head of this queue
+        myQueue.remove();
 
-            //Retrieves and removes the "head of this queue", or returns "null" if this queue is empty.
-            myQueue.poll();
+        //Retrieves, but does not remove, the head of this queue.
+        //This method differs from peek only in that it throws an "exception" if this queue is empty., app durur, Copy-Paste
+        myQueue.element();
 
-            //Retrieves and removes the head of this queue.
-            //This method differs from poll() only in that it throws an exception if this queue is empty.
-            //Returns:the head of this queue
-            myQueue.remove();
-
-            //Retrieves, but does not remove, the head of this queue.
-            //This method differs from peek only in that it throws an exception if this queue is empty.
-            myQueue.element();
-
-            //Retrieves, but does not remove, the head of this queue, or returns null if this queue is empty.
-            myQueue.peek();
+        //Retrieves, but does not remove, the head of this queue, or returns "null" if this queue is empty.  Copy-Paste
+        myQueue.peek();
 
         /*
             poll() ile remove() ikisi de ilk elemani siler ve size verir.
             poll() bos "Queue" lar icin "null" verir, remove() ise bos "Queue" lar icin "Exception" atar.
-        */
 
-        /*
+
+
             element() ile peek() ikisi de ilk elemani silmeden size verir.
             peek() bos "Queue" lar icin "null" verir, element() ise bos "Queue" lar icin "Exception" atar.
-        */
 
-        /*
+
+
         Inserts the specified element into this queue if it is possible to do so immediately without violating capacity restrictions.
         When using a capacity-restricted queue, this method is generally preferable to add,
         which can fail to insert an element only by throwing an exception.
@@ -64,24 +64,20 @@ public class Queue01 {
         NullPointerException – if the specified element is null and this queue does not permit null elements
         IllegalArgumentException – if some property of this element prevents it from being added to this queue
          */
-            boolean r = myQueue.offer("Avocado");
-            System.out.println(r);//true
-
+        boolean r = myQueue.offer("Avocado");
+        System.out.println(r);//true, elemani ekleyebilirse true verir, verdi
             System.out.println(myQueue);// [Jam, Egg, Luxury water, Avocado]
 
-            Queue<String> yourQueue = new PriorityQueue<>();
-            yourQueue.add("Milk");
-            yourQueue.add("Butter");
-            yourQueue.add("Jam");
-            yourQueue.add("Egg");
-            yourQueue.add("Luxury water");
-            System.out.println(yourQueue);//[Butter, Egg, Jam, Milk, Luxury water]
-        }
+        Queue<String> yourQueue = new PriorityQueue<>();
+        yourQueue.add("Milk");
+        yourQueue.add("Butter");
+        yourQueue.add("Jam");
+        yourQueue.add("Egg");
+        yourQueue.add("Luxury water");
+        System.out.println(yourQueue);//[Butter, Egg, Jam, Milk, Luxury water]
+    }
 
 
-
-
-
-            }
+}
 
 
