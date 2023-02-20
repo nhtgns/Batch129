@@ -9,11 +9,7 @@ public class Ogrenci extends VeriBankasi{
     public Ogrenci() {
     }
 
-    public Ogrenci(String ogrenciNo, int sinif, String sinifSube) {
-        this.ogrenciNo = ogrenciNo;
-        this.sinif = sinif;
-        this.sinifSube = sinifSube;
-    }
+
 
     public Ogrenci(String ad, String soyad, String tc, int yas, String ogrenciNo, int sinif, String sinifSube) {
         super(ad, soyad, tc, yas);

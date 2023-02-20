@@ -11,6 +11,13 @@ public class Ogretmen extends VeriBankasi{
     public Ogretmen(String bolum, String sicilNo) {
         this.bolum = bolum;
         this.sicilNo = sicilNo;
+
+    }
+
+    public Ogretmen(String ad, String soyad, String tc, int yas, String bolum, String sicilNo) {
+        super(ad, soyad, tc, yas);
+        this.bolum = bolum;
+        this.sicilNo = sicilNo;
     }
 
     public String getBolum() {
