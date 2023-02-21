@@ -1,0 +1,86 @@
+		Git-GitHub notlarım.
+​
+Git = Global Information Tracker
+VCS - Version Control System
+​
+	3 tip versiyon kontrol sistemi var
+1- Yerel	- Git
+2- Merkezi	- GitHub
+3- Dağınık	- Git-GitHub'ın beraber çalışma (attribute) prensibi.
+	(bağlanmak = attribute)
+​
+​
+Git-GitHub kullanmanın amacı&faydası nedir ?
+	Git (Locale):
+Localde versiyon yönetimimizi offline olarak yapabiliriz.
+Kaydedebiliriz. Hataları geri alabiliriz üzerinde oynama yapabiliriz.
+Önceki versiyonlara dönüş yapabiliriz.
+​
+	GitHub (Remote):
+Yedekleme (Backup).
+Proje paylaşımı (Share),
+Yayınlama (Deploy),
+Ortak çalışma (Collobration)
+​
+​
+		Git komutları
+git --version
+git config --global -l  (Git bilgilerini isim, mail, password vb. getirir.)
+git config --global user.name " biseyler yaz "
+git config --global user.email " biseyler yaz "
+git config --global user.password " biseyler yaz "
+git config --global color.ui true (Terminal ön yüzü renkli olur)
+cls (cmd ekranını siler)
+​
+Bu kodlarla Git bilgilerinizi update edersiniz.
+Repo'da çalışan diğer kişiler bize buradan ulaşır, dedi.
+Ben şimdi kendime göre hallettim
+("git config --global -l" yazarak bu bilgileri görebilirsin.)
+​
+bu komutların GitHub ile alakası yok korkmayın dedi.
+Bunları cmd'den ya da intellij terminalden de yapabilirsiniz dedi.
+​
+​
+​
+​
+"System" parametresi tüm kullanıcılar ve tüm repolar üzerinde etkilidir.
+"Global" parametresi geçerli kullanıcının tüm repoları üzerinde etkili olur.
+"Local" parametresi sadece geçerli repo üzerinde etkili olur.
+	Mesela gördüğünüz gibi yukarıda global kullandık.
+​
+​
+​
+	Repository :
+VCS ve collobration için her proje için
+ayrı ayrı oluşturduğumuz bağımsız yapıya repsitory denir.
+​
+
+		Git Komutları
+	cd (change directory)
+(C:\Users\MONSTER> cd C:\Users\MONSTER\Desktop\Project01 yazarsak çalışcağımız ortamı değiştirmiş oluruz.)
+	git --init (Local pc'mizde bir projeyi VCS ile ilişkilendirmek için kullanılır.
+Bu komut kullanılınca projemizin olduğu klasörde .git hidden klasörü oluşturulur.
+Burada Local repomuz saklanacaktır.)
+
+
+	Genel Kavramlar
+1- Working Space	-> .git klasörünün bulunduğu çalışma alanıdır. Değişiklikler burada yapılır. git --init deyince working space aşamasında olmuş oluyoruz.
+2- Staging Area	-> Versiyon oluşturulacak olan dosya veya klasörlerin geçici olarak toplandığı yerdir. Commit yapıldıktan sonra burası otomatik olarak boşaltılır.
+3- Commit Store	-> Git her bir commit'i ayrı bir version olarak kopyalar. Böylece önceki commit'lere geri dönülerek çalışmaya devam edilebilir.
+​
+Working Space ve Staging Area'ya Working Tree denir.
+​
+		Git Komutları
+	git add dosya_adı (git add . dersek tüm dosyaları göndeririz) ile dosyayı Working Space'den Staging Area'ya göndeririz.
+	git commit -m "commit ismi" (git commit --amend -m "yeni isim") ile dosyayı Staging Area'dan Commit Store'a göndeririz.
+	git status / git diff Working Space veya Staging Area durumunu gösterir.
+	git commit -am "v2.1" Working Space'den direkt olarak Commit Store'a göndeririz. Yani git add yapmamış oluruz.
+	git log yaptığımız commitlerin kim tarafından ne zaman yapıldığı gibi detayları gösterir
+	git push yaparak local repoda yani commit store'a gönderdiğimiz şeyleri remote repoya göndermiş oluruz.
+	git show -hashcodeun ilk 7 hanesi-, git log'dan daha detaylı olarak hangi değişiklikleri yaptığımızı gösterir. Syntax'ı git show -hashcodeun ilk 7 hanesi- girilir.
+	git log --oneline, oluşturduğumuz versiyonların özetini verir. (hashcodeun ilk 7 hanesini rahatlıkla görebiliriz.)
+​
+​
+​
+Eğer bir code Working Space'de ise kırmızı renkli olur.
+Eğer bir code Staging Area'da ise yeşil renkli olur.
