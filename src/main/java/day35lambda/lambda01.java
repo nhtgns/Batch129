@@ -8,7 +8,7 @@ public class lambda01 {
 
     public static void main(String[] args) {
          /*
-        1)Lambda "Functional programming" dir, digeri "Structured Programming"
+        1)Lambda "Functional(method) programming" dir, digerleri "Structured Programming"
         2)"Functional programming" "Ne yapmak gerekir?(What to do?)" ile ilgilenir "Nasil yapmak gerekir?(How to do?)" ile ilgilenmez.
        *** 3)"Functional programming" Collection'lar ve Array'lerde kullanilir.
         4)Lambda, Java'ya "Java 8"de eklendi.
@@ -34,9 +34,9 @@ public class lambda01 {
         nums.add(12);
         nums.add(15);
 
-        printElements1(nums);
+        printElements1(nums); //12 9 131 14 9 10 4 12 15
         System.out.println();
-        printElements2(nums);
+        printElements2(nums);//12 9 131 14 9 10 4 12 15
         System.out.println();
         printEvenElements1(nums);
         System.out.println();
@@ -69,7 +69,7 @@ public class lambda01 {
     }
 
     //1)Create a method to print the list elements on the console in the same line with a space between two consecutive elements.(Structured)
-    //  Bir list'teki elemanlari ayni satirda aralarina bosluk koyarak yazdiran method'u olusturunuz.(Structured)
+    //  Bir list'teki elemanlari ayni satirda aralarina bosluk koyarak yazdiran method'u olusturunuz.(Structured) klasik yontem==> kod yazarak
     public static void printElements1(List<Integer> nums) {
         for (Integer w : nums) {
             System.out.print(w + " ");
