@@ -19,7 +19,7 @@ public class lambda01 {
         "distinct()" u tekrarli elemanlari sadece bir kere gosterir ve tekrarsizlari olduklari kadar gosterir.
          Note : Distinct methodu ilk baslara konulursa "Lambda" ya daha az is yaptirmis oluruz.
         "reduce()" u  kullanildiginda cok sayidaki deger bir tane degere donusmus olur.
-         Orn; reduce(0,(t,u)->t+u) ==> "t" ilk degeri "sifir" dan alir, daha sonraki degerleri toplamanin sonucundan alir.
+         Orn; reduce(0,(t,u)->t+u) ==> "t" ilk degeri "sifir" dan alir, daha sonraki degerleri toplamanin sonucundan alir
          "u" ise degerlerini her zaman "stream" den alir.
          get()==> methodu "optional data type"ini "Integer"a cevirir.
     */
