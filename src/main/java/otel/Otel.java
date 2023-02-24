@@ -7,7 +7,7 @@ public abstract class Otel {
     3) musteri silme olmali
     4) kahvalti zorunlu olmali
     5) internet zorunlu degil
-    6) her odanin fiyati fakli olmali
+    6) her odanin fiyati fakli olmali.
    */
 
     String musteriAdi;
