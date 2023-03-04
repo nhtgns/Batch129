@@ -4,7 +4,7 @@ public class ForWhileDoWhileLoop {
     public static void main(String[] args) {
         //Soru 1) 3 ile 8 arasindaki(3 ve  8 dahil) sayilari  ayni satirda yazdirin
 
-        //Soru 1) 3 ile 8 arasindaki(3 ve  8 dahil) sayilari  ayni satirda yazdirin
+        //Soru 1) 3 ile 8 arasindaki(3 ve  8 dahil) sayilari  ayni satirda yazdirinn
 
         for (int i = 3; i <9 ; i++) {
             System.out.print(i + " ");//3 4 5 6 7 8
