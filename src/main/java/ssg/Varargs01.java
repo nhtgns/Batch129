@@ -3,7 +3,7 @@ package ssg;
 public class Varargs01 {
     public static void main(String[] args) {
 
-        // iki sayinin toplyan bir method olustrun
+        // iki sayinin toplyan bir method olustru
 
         dortSayiTopla(3,5, 6,6);// 4 Arguments
         ikiSayiTopla(45,60);// 2 arguments
