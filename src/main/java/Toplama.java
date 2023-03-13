@@ -3,6 +3,7 @@ public class Toplama {
         int a;
         int b;
         int c;
+        int d;
 
     }
 }
