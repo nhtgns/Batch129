@@ -1,10 +1,10 @@
 public class Varargs02 {
     public static void main(String[] args) {
 
-        toplama();
+        toplam();
     }
 
-    private static void toplama(int ... a) {
+    private static void toplam(int ... a) {
 
     }
 }
